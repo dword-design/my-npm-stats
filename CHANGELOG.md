@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/dword-design/my-npm-stats/compare/v1.0.1...v1.0.2) (2020-07-28)
+
+
+### Bug Fixes
+
+* replace module ([56de029](https://github.com/dword-design/my-npm-stats/commit/56de02993b718b1a34cf34d532ad86904d20add0))
+
 ## [1.0.1](https://github.com/dword-design/my-npm-stats/compare/v1.0.0...v1.0.1) (2020-07-28)
 
 
