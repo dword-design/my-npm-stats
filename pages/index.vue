@@ -26,6 +26,9 @@ export default {
         |> await
       : [],
   }),
+  head: {
+    title: 'Package stats and dependents for NPM authors',
+  },
   render() {
     return (
       <div>
@@ -38,7 +41,7 @@ export default {
           <div class="hero-body">
             <div class="container">
               <div class="columns is-centered">
-                <div class="column is-two-thirds">
+                <div class="column is-half">
                   <form method="get">
                     <b-field custom-class="is-medium" horizontal label="Author">
                       <b-input name="author" size="is-medium" type="text" />
