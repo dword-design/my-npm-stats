@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/dword-design/my-npm-stats/compare/v1.0.0...v1.0.1) (2020-07-28)
+
+
+### Bug Fixes
+
+* add google analytics ([407d5e1](https://github.com/dword-design/my-npm-stats/commit/407d5e1dece6d0d4e4ea400620f976ace3a2290a))
+
 # 1.0.0 (2020-07-28)
 
 
