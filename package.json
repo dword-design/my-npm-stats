@@ -1,0 +1,42 @@
+{
+  "name": "my-npm-stats",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "dword-design/my-npm-stats",
+  "license": "MIT",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "analyze": "base analyze",
+    "clean": "base clean",
+    "commit": "base commit",
+    "dev": "base dev",
+    "lint": "base lint",
+    "prepare": "base prepare",
+    "prepublishOnly": "base prepublishOnly",
+    "pull": "base pull",
+    "push": "base push",
+    "setupDeploy": "base setupDeploy",
+    "start": "base start",
+    "test": "base test"
+  },
+  "dependencies": {
+    "@dword-design/functions": "^1.1.3",
+    "@dword-design/nuxt-buefy": "^1.0.5",
+    "async-iterator-to-array": "^0.0.1",
+    "npm-dependants": "^2.1.2",
+    "npm-package-downloads": "^1.2.0",
+    "nuxt-webfontloader": "^1.1.0"
+  },
+  "devDependencies": {
+    "@dword-design/base": "^6.24.2",
+    "@dword-design/base-config-app": "^1.5.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "baseConfig": "@dword-design/app"
+}

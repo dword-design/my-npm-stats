@@ -1,0 +1,36 @@
+$primary: #cb3837;
+$link: $primary;
+$family-sans-serif: "Source Sans Pro", sans-serif;
+$card-header-padding: 0.75rem 1.5rem;
+$body-size: 18px;
+$size-5: 20px;
+$size-4: 22px;
+$size-3: 24px;
+$size-2: 42px;
+
+@import "~bulma/sass/utilities/_all";
+
+@import "@dword-design/nuxt-buefy/dist/style";
+
+.hero.is-primary .label {
+  color: #fff;
+}
+
+.card .table {
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
+
+  &.is-fullwidth {
+    width: calc(100% + 3rem);
+  }
+
+  th,
+  td {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+.h-full {
+  height: 100%;
+}
