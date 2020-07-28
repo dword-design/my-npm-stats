@@ -10,6 +10,7 @@ export default {
         },
       },
     ],
+    ['@nuxtjs/google-analytics', { id: 'UA-77425155-2' }],
   ],
   name: 'my-npm-stats',
   title: 'my-npm-stats',
