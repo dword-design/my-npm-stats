@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/dword-design/my-npm-stats/compare/v1.0.3...v1.0.4) (2020-07-29)
+
+
+### Bug Fixes
+
+* optimize ux ([abbad27](https://github.com/dword-design/my-npm-stats/commit/abbad27fd47cc38d952be34d9644ad23930c3497))
+
 ## [1.0.3](https://github.com/dword-design/my-npm-stats/compare/v1.0.2...v1.0.3) (2020-07-29)
 
 
