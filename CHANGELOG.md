@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/dword-design/my-npm-stats/compare/v1.0.2...v1.0.3) (2020-07-29)
+
+
+### Bug Fixes
+
+* add claim ([e93c7a8](https://github.com/dword-design/my-npm-stats/commit/e93c7a82fff5231772e91d99b358f8bfc4690532))
+
 ## [1.0.2](https://github.com/dword-design/my-npm-stats/compare/v1.0.1...v1.0.2) (2020-07-28)
 
 
