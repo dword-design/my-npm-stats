@@ -38,3 +38,11 @@ $size-2: 42px;
 .field-label {
   flex-grow: 0;
 }
+
+.loading-overlay .loading-icon {
+  position: static;
+
+  &::after {
+    top: 5rem;
+  }
+}

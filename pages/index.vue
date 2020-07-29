@@ -1,32 +1,13 @@
 <script>
-import { map, property, sortBy } from '@dword-design/functions'
-import asyncIteratorToArray from 'async-iterator-to-array'
-import npmDependants from 'npm-dependants'
-import npmPackageDownloads from 'npm-package-downloads'
+import { map, sortBy } from '@dword-design/functions'
 
 import variables from '@/model/variables'
 
 export default {
-  asyncData: async context => ({
-    packages: context.query.author
-      ? context.app.$axios.$get('https://api.npms.io/v2/search', {
-          params: { q: `author:${context.query.author}` },
-        })
-        |> await
-        |> property('results')
-        |> map('package')
-        |> map(async packageData => ({
-          ...packageData,
-          dependents:
-            packageData.name |> npmDependants |> asyncIteratorToArray |> await,
-          weeklyDownloads:
-            npmPackageDownloads(packageData.name, 'last-week')
-            |> await
-            |> property('downloads'),
-        }))
-        |> Promise.all
-        |> await
-      : [],
+  data: () => ({
+    authorName: '',
+    isLoading: false,
+    packages: [],
   }),
   head: {
     title: variables.claim,
@@ -43,9 +24,18 @@ export default {
             <div class="container">
               <div class="columns is-centered">
                 <div class="column is-half">
-                  <form method="get">
+                  <form
+                    v-on:submit_prevent={() =>
+                      this.$router.push({ query: { author: this.authorName } })
+                    }
+                  >
                     <b-field custom-class="is-medium" horizontal label="Author">
-                      <b-input name="author" size="is-medium" type="text" />
+                      <b-input
+                        name="author"
+                        size="is-medium"
+                        type="text"
+                        v-model={this.authorName}
+                      />
                     </b-field>
                   </form>
                 </div>
@@ -55,7 +45,15 @@ export default {
         </section>
         <section class="section">
           <div class="container">
-            <div class="columns is-multiline">
+            <div
+              class="columns is-multiline"
+              style={
+                this.isLoading
+                  ? { minHeight: '15rem', position: 'relative' }
+                  : {}
+              }
+            >
+              <b-loading active={this.isLoading} is-full-page={false} />
               {this.packages
                 |> sortBy(_ => -_.weeklyDownloads)
                 |> map(packageData => (
@@ -69,5 +67,25 @@ export default {
       </div>
     )
   },
+  watch: {
+    '$route.query.author': {
+      handler() {
+        if (process.client) {
+          this.$nextTick(async () => {
+            this.authorName = this.$route.query.author
+            this.isLoading = true
+            this.packages = await this.$axios.$get('/api/packages', {
+              params: {
+                author: this.$route.query.author,
+              },
+            })
+            this.isLoading = false
+          })
+        }
+      },
+      immediate: true,
+    },
+  },
+  watchQuery: true,
 }
 </script>

@@ -28,6 +28,7 @@
     "@dword-design/nuxt-buefy": "^1.0.5",
     "@nuxtjs/google-gtag": "^1.0.4",
     "async-iterator-to-array": "^0.0.1",
+    "axios": "^0.19.2",
     "npm-dependants": "^2.1.2",
     "npm-package-downloads": "^1.2.0",
     "nuxt-webfontloader": "^1.1.0"
