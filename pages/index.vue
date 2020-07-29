@@ -4,6 +4,8 @@ import asyncIteratorToArray from 'async-iterator-to-array'
 import npmDependants from 'npm-dependants'
 import npmPackageDownloads from 'npm-package-downloads'
 
+import variables from '@/model/variables'
+
 export default {
   asyncData: async context => ({
     packages: context.query.author
@@ -27,15 +29,14 @@ export default {
       : [],
   }),
   head: {
-    title: 'Package stats and dependents for NPM authors',
+    title: variables.claim,
   },
   render() {
     return (
       <div>
-        <section class="section">
-          <h1 class="title is-size-2 has-text-centered has-text-primary">
-            my-npm-stats
-          </h1>
+        <section class="section has-text-centered">
+          <h1 class="title is-size-2 has-text-primary">my-npm-stats</h1>
+          <h2 class="subtitle">{variables.claim}</h2>
         </section>
         <section class="hero is-primary is-bold">
           <div class="hero-body">
