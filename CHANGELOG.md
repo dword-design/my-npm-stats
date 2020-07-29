@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/dword-design/my-npm-stats/compare/v1.0.5...v1.0.6) (2020-07-29)
+
+
+### Bug Fixes
+
+* adjust favicon ([035cd27](https://github.com/dword-design/my-npm-stats/commit/035cd277a8cffbccc3a8ab587b81a7ed020abf3e))
+
 ## [1.0.5](https://github.com/dword-design/my-npm-stats/compare/v1.0.4...v1.0.5) (2020-07-29)
 
 
