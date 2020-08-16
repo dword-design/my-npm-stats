@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dword-design/my-npm-stats/compare/v1.0.6...v1.1.0) (2020-08-16)
+
+
+### Features
+
+* retheme as table ([c8f5e83](https://github.com/dword-design/my-npm-stats/commit/c8f5e83cbce5955251f6f569a075334800cb71bc))
+
 ## [1.0.6](https://github.com/dword-design/my-npm-stats/compare/v1.0.5...v1.0.6) (2020-07-29)
 
 
