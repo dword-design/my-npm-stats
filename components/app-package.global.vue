@@ -18,35 +18,14 @@ export default {
         {context.props.value.weeklyDownloads.toLocaleString()}
       </td>
       <td>
-        {context.props.value.dependentsCount > 0 ? (
-          <b-button
-            type="is-light"
-            v-on:click={() =>
-              context.parent.$buefy.modal.open({
-                component: 'b-card-modal',
-                hasModalCard: true,
-                parent: context.parent,
-                props: {
-                  inner: 'app-dependents',
-                  props: {
-                    value: context.props.value,
-                  },
-                },
-              })
-            }
-          >
-            {context.props.value.dependentsCount}
-          </b-button>
-        ) : (
-          <span
-            style={{
-              paddingLeft: '.75em',
-              paddingRight: '.75em',
-            }}
-          >
-            {context.props.value.dependentsCount}
-          </span>
-        )}
+        <b-button
+          href={`https://www.npmjs.com/browse/depended/${context.props.value.name}`}
+          tag="a"
+          target="_blank"
+          type="is-light"
+        >
+          {context.props.value.dependentsCount}
+        </b-button>
       </td>
     </tr>
   ),
