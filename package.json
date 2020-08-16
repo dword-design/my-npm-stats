@@ -29,6 +29,8 @@
     "@nuxtjs/google-gtag": "^1.0.4",
     "async-iterator-to-array": "^0.0.1",
     "axios": "^0.19.2",
+    "fetch-paginate": "^6.1.0",
+    "node-fetch": "^2.6.0",
     "npm-dependants": "^2.1.2",
     "npm-package-downloads": "^1.2.0",
     "nuxt-webfontloader": "^1.1.0"

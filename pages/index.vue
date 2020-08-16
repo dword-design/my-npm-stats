@@ -23,7 +23,7 @@ export default {
           <div class="hero-body">
             <div class="container">
               <div class="columns is-centered">
-                <div class="column is-half">
+                <div class="column is-four-fifths">
                   <form
                     v-on:submit_prevent={() =>
                       this.$router.push({ query: { author: this.authorName } })
@@ -46,9 +46,13 @@ export default {
         <section class="section">
           <div
             class="container"
-            style={
-              this.isLoading ? { minHeight: '15rem', position: 'relative' } : {}
-            }
+            style={{
+              overflowX: 'auto',
+              ...(this.isLoading && {
+                minHeight: '15rem',
+                position: 'relative',
+              }),
+            }}
           >
             <b-loading active={this.isLoading} is-full-page={false} />
             {this.packages.length > 0 && (
