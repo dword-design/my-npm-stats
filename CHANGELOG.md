@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/dword-design/my-npm-stats/compare/v1.1.2...v1.1.3) (2020-08-16)
+
+
+### Bug Fixes
+
+* remove dependents dialog for now because it does not work with big dependent lists ([c564381](https://github.com/dword-design/my-npm-stats/commit/c564381853249ab6b3f04de302b512b34b237de6))
+
 ## [1.1.2](https://github.com/dword-design/my-npm-stats/compare/v1.1.1...v1.1.2) (2020-08-16)
 
 
