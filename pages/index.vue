@@ -44,24 +44,31 @@ export default {
           </div>
         </section>
         <section class="section">
-          <div class="container">
-            <div
-              class="columns is-multiline"
-              style={
-                this.isLoading
-                  ? { minHeight: '15rem', position: 'relative' }
-                  : {}
-              }
-            >
-              <b-loading active={this.isLoading} is-full-page={false} />
-              {this.packages
-                |> sortBy(_ => -_.weeklyDownloads)
-                |> map(packageData => (
-                  <div class="column is-half">
-                    <app-package class="h-full" value={packageData} />
-                  </div>
-                ))}
-            </div>
+          <div
+            class="container"
+            style={
+              this.isLoading ? { minHeight: '15rem', position: 'relative' } : {}
+            }
+          >
+            <b-loading active={this.isLoading} is-full-page={false} />
+            {this.packages.length > 0 && (
+              <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th style={{ width: '180px' }}>Weekly downloads</th>
+                    <th style={{ width: '130px' }}>Dependents</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.packages
+                    |> sortBy(_ => -_.weeklyDownloads)
+                    |> map(packageData => (
+                      <app-package class="h-full" value={packageData} />
+                    ))}
+                </tbody>
+              </table>
+            )}
           </div>
         </section>
       </div>
