@@ -14,7 +14,9 @@ export default {
           {context.props.value.name}
         </a>
       </td>
-      <td class="is-size-5">{context.props.value.weeklyDownloads}</td>
+      <td class="is-size-5">
+        {context.props.value.weeklyDownloads.toLocaleString()}
+      </td>
       <td>
         {context.props.value.dependentsCount > 0 ? (
           <b-button

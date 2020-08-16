@@ -32,7 +32,6 @@
     "fetch-paginate": "^6.1.0",
     "node-fetch": "^2.6.0",
     "npm-dependants": "^2.1.2",
-    "npm-package-downloads": "^1.2.0",
     "nuxt-webfontloader": "^1.1.0"
   },
   "devDependencies": {
