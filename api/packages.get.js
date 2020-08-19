@@ -22,7 +22,7 @@ export default async (req, res) => {
   const limit = 250
   const packages = req.query.author
     ? fetchPaginate(
-        `https://api.npms.io/v2/search?q=author:${req.query.author}`,
+        `https://api.npms.io/v2/search?q=author:${req.query.author}+not:deprecated`,
         {
           getFetch: () => fetch,
           getItems: property('results'),
@@ -64,7 +64,7 @@ export default async (req, res) => {
           chunkNames.length === 1
             ? { [chunkNames |> first]: chunkPackages }
             : chunkPackages
-        |> mapValues('downloads')
+        |> mapValues(_ => _?.downloads || 0)
     )
     |> Promise.all
     |> await
