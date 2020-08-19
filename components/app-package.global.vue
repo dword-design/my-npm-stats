@@ -24,7 +24,7 @@ export default {
           target="_blank"
           type="is-light"
         >
-          {context.props.value.dependentsCount}
+          {context.props.value.dependentsCount.toLocaleString()}
         </b-button>
       </td>
     </tr>
