@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/dword-design/my-npm-stats/compare/v1.1.3...v1.1.4) (2020-08-19)
+
+
+### Bug Fixes
+
+* remove deprecated ([09f523f](https://github.com/dword-design/my-npm-stats/commit/09f523fb8c12a04032f2b83eda86980077fdacb3))
+
 ## [1.1.3](https://github.com/dword-design/my-npm-stats/compare/v1.1.2...v1.1.3) (2020-08-16)
 
 
