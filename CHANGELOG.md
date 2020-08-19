@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/dword-design/my-npm-stats/compare/v1.1.4...v1.1.5) (2020-08-19)
+
+
+### Bug Fixes
+
+* add separators to dependents count ([ddd9df4](https://github.com/dword-design/my-npm-stats/commit/ddd9df445ba4b05d2b1be8755b5ba1d9efbd0279))
+
 ## [1.1.4](https://github.com/dword-design/my-npm-stats/compare/v1.1.3...v1.1.4) (2020-08-19)
 
 
