@@ -1148,9 +1148,9 @@
     vue "^2.6.11"
 
 "@dword-design/base@^6.24.2":
-  version "6.25.0"
-  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-6.25.0.tgz#1a5f5f6655ce7001781c3622b30c8098659f6e99"
-  integrity sha512-p7Ka9lk2+YcjMUy5twlV4ZurpQc7T3W+hYojOqYgKUpQVxX2eAewGBj67Ve3dWvrj1UZOeD7SA6JK4hwS2l01w==
+  version "6.25.1"
+  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-6.25.1.tgz#a7e63616c4b9f356caa96135484649a0d0f7f5e2"
+  integrity sha512-9QcfdbQ9+Ikokxf3RRHeuUP4kiXOAGJkMo/FWEY8hmx2DGz1NhXY9wkS8Fjq74Kj8ImUdfOHVxDRH/CDEX4ufQ==
   dependencies:
     "@babel/core" "^7.6.4"
     "@babel/register" "^7.6.2"
@@ -4261,6 +4261,11 @@ commander@^5.0.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-5.1.0.tgz#46abbd1652f8e059bddaef99bbdcb2ad9cf179ae"
   integrity sha512-P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg==
 
+commander@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-6.0.0.tgz#2b270da94f8fb9014455312f829a1129dbf8887e"
+  integrity sha512-s7EA+hDtTYNhuXkTlhqew4txMZVdszBmKWSPEMxGr8ru8JXR7bLUFIAtPhcSuFdJQ0ILMxnJi8GkQL0yvDy/YA==
+
 commitizen@^4.0.3:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/commitizen/-/commitizen-4.1.5.tgz#0d54fbac6da4c14e14c0b2159b4f2fedb8321dd7"
@@ -5587,9 +5592,8 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-endent@dword-design/endent#fork, "endent@github:dword-design/endent#fork":
+endent@dword-design/endent#fork:
   version "1.4.0"
-  uid be5433db67eaec07c6c9d00ba3bed2ed946dc664
   resolved "https://codeload.github.com/dword-design/endent/tar.gz/be5433db67eaec07c6c9d00ba3bed2ed946dc664"
   dependencies:
     dedent dword-design/dedent#fork
@@ -5809,7 +5813,7 @@ eslint-module-utils@^2.4.1:
     debug "^2.6.9"
     pkg-dir "^2.0.0"
 
-"eslint-plugin-import@github:dword-design/eslint-plugin-import#fork":
+eslint-plugin-import@dword-design/eslint-plugin-import#fork:
   version "2.20.1"
   resolved "https://codeload.github.com/dword-design/eslint-plugin-import/tar.gz/092878bcc1f9b7ef80ca755bfd77e13b15aa9ef3"
   dependencies:
@@ -6180,7 +6184,7 @@ expect@^26.0.0:
     jest-message-util "^26.3.0"
     jest-regex-util "^26.0.0"
 
-"express-mount-files@github:dword-design/express-mount-files#fork":
+express-mount-files@dword-design/express-mount-files#fork:
   version "0.1.1"
   resolved "https://codeload.github.com/dword-design/express-mount-files/tar.gz/c9778e91443c9a3824a01298dc5090a3b53db8df"
   dependencies:
@@ -8141,9 +8145,9 @@ is-generator-function@^1.0.7:
   integrity sha512-YZc5EwyO4f2kWCax7oegfuSr9mFz1ZvieNYBEjmukLxgXfBUbxAWGVF7GZf0zidYtoBl3WvC07YK0wT76a+Rtw==
 
 is-gitpod@^1.0.7:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/is-gitpod/-/is-gitpod-1.0.12.tgz#225a2eb3c6f55e78e08f84c5a43a548129e2c4ba"
-  integrity sha512-XfbatyP4flMTGdfHoTdoGAr0j3R1g3TPQLk2dKiNBspeUa7r5jhjD1BVwLTaBYBT6FCcVmEPBmstxl/7vK5l7w==
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/is-gitpod/-/is-gitpod-1.0.13.tgz#ff2e59df49630aa1bff5e2f90ff561955f5ff4fe"
+  integrity sha512-9bLWFaTuOiAuHHar+fD5LlHymfMX9daZjDvR31eSU9IycIJUMPmm8HVE3u7NiR9lAc3KyTh5bD3NutCaSCKm7A==
   dependencies:
     which "^2.0.2"
 
@@ -9405,7 +9409,15 @@ macos-release@^2.2.0:
   resolved "https://registry.yarnpkg.com/macos-release/-/macos-release-2.4.1.tgz#64033d0ec6a5e6375155a74b1a1eba8e509820ac"
   integrity sha512-H/QHeBIN1fIGJX517pvK8IEK53yQOW7YcEI55oYtgjDdoCQQz7eJS94qt5kNrscReEyuD/JcdFCm2XBEcGOITg==
 
-make-cli@^1.0.16, make-cli@^1.0.4, make-cli@^1.0.9:
+make-cli@^1.0.16, make-cli@^1.0.9:
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/make-cli/-/make-cli-1.0.22.tgz#22ab161bc5c85f77e19f88d728e44130d2f73690"
+  integrity sha512-BvaUAmNGlcSWsioJuGCxySM+EmcL/6NVOPSrw7AgGbMdjGOPmayRnFrCBLwQ3zE4IkzKe0rdI9dpivpISGh5ow==
+  dependencies:
+    "@dword-design/functions" "^2.2.2"
+    commander "^6.0.0"
+
+make-cli@^1.0.4:
   version "1.0.21"
   resolved "https://registry.yarnpkg.com/make-cli/-/make-cli-1.0.21.tgz#925b21077ee5a9329243ddde30ab3d8b37c9a043"
   integrity sha512-hCT+5+7dlSvnvkkvGqqZsnpnCNzrFUM/ydQu+rYDsB52/Cl4KdYeFnMUrNIiIyr64+VnWI1c10daJhJP7jDing==
@@ -10588,7 +10600,7 @@ nuxt-buefy@^0.4.2:
   dependencies:
     buefy "^0.9.2"
 
-"nuxt-i18n@github:dword-design/nuxt-i18n#fork":
+nuxt-i18n@dword-design/nuxt-i18n#fork:
   version "6.11.0"
   resolved "https://codeload.github.com/dword-design/nuxt-i18n/tar.gz/eb249de4aa692a1883b8f22237855d3c515a234b"
   dependencies:
@@ -12353,7 +12365,7 @@ prettier@^1.18.2:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
   integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
 
-"prettier@github:prettier/prettier#19545e049ea424273fb6d647eefd1787d998b333":
+prettier@prettier/prettier#19545e049ea424273fb6d647eefd1787d998b333:
   version "2.1.0-dev"
   resolved "https://codeload.github.com/prettier/prettier/tar.gz/19545e049ea424273fb6d647eefd1787d998b333"
   dependencies:
@@ -13433,7 +13445,7 @@ safe-regex@^1.1.0:
   dependencies:
     ret "~0.1.10"
 
-"safe-require@github:dword-design/node-safe-require#fork":
+safe-require@dword-design/node-safe-require#fork:
   version "1.0.3"
   resolved "https://codeload.github.com/dword-design/node-safe-require/tar.gz/53682cf7aa25d784c6278f8ccbc9986ad0dd5f38"
 
@@ -14475,7 +14487,7 @@ stylelint-scss@^3.17.2:
     postcss-selector-parser "^6.0.2"
     postcss-value-parser "^4.1.0"
 
-"stylelint-use-nesting@github:dword-design/stylelint-use-nesting#fork":
+stylelint-use-nesting@dword-design/stylelint-use-nesting#fork:
   version "3.0.0"
   resolved "https://codeload.github.com/dword-design/stylelint-use-nesting/tar.gz/3fa262d8898e33da3831ed526e45dade37c270e7"
 
