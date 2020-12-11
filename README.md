@@ -4,25 +4,29 @@
 
 <!-- BADGES/ -->
 ![Linux macOS Windows compatible](https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue)
-[![Build status](https://img.shields.io/github/workflow/status/dword-design/my-npm-stats/build)](https://github.com/dword-design/my-npm-stats/actions)
-[![Coverage status](https://img.shields.io/coveralls/dword-design/my-npm-stats)](https://coveralls.io/github/dword-design/my-npm-stats)
+[![Build status](https://github.com/dword-design/my-npm-stats/workflows/build/badge.svg)](https://github.com/dword-design/my-npm-stats/actions)
 [![Dependency status](https://img.shields.io/david/dword-design/my-npm-stats)](https://david-dm.org/dword-design/my-npm-stats)
 ![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen)
 
-<a href="https://www.buymeacoffee.com/dword">
+<a href="https://gitpod.io/#https://github.com/dword-design/bar">
+  <img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open in Gitpod">
+</a><a href="https://www.buymeacoffee.com/dword">
   <img
     src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg"
     alt="Buy Me a Coffee"
     height="32"
   >
-</a><a href="https://gitpod.io/#https://github.com/dword-design/my-npm-stats">
-  <img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open in Gitpod">
-</a>
-<a href="https://paypal.me/SebastianLandwehr">
+</a><a href="https://paypal.me/SebastianLandwehr">
   <img
-    src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+    src="https://dword-design.de/images/paypal.svg"
     alt="PayPal"
-    height="30"
+    height="32"
+  >
+</a><a href="https://www.patreon.com/dworddesign">
+  <img
+    src="https://dword-design.de/images/patreon.svg"
+    alt="Patreon"
+    height="32"
   >
 </a>
 <!-- /BADGES -->
