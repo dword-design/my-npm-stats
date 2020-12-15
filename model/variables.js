@@ -1,3 +1,3 @@
 export default {
-  claim: 'Package stats and dependents for NPM authors',
+  claim: 'Package stats and dependents for npm authors',
 }
