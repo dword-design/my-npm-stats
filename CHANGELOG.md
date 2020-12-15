@@ -1,3 +1,10 @@
+## [1.1.10](https://github.com/dword-design/my-npm-stats/compare/v1.1.9...v1.1.10) (2020-12-15)
+
+
+### Bug Fixes
+
+* fix npm name in claim ([7e72c7e](https://github.com/dword-design/my-npm-stats/commit/7e72c7ed6d4e9e29eab218b57854f64c289d697b))
+
 ## [1.1.9](https://github.com/dword-design/my-npm-stats/compare/v1.1.8...v1.1.9) (2020-12-11)
 
 
