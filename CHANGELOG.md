@@ -1,3 +1,10 @@
+## [1.1.11](https://github.com/dword-design/my-npm-stats/compare/v1.1.10...v1.1.11) (2021-02-17)
+
+
+### Bug Fixes
+
+* upgrades ([157b1da](https://github.com/dword-design/my-npm-stats/commit/157b1da78f5881c5aa20b5ca56678e88cabe3753))
+
 ## [1.1.10](https://github.com/dword-design/my-npm-stats/compare/v1.1.9...v1.1.10) (2020-12-15)
 
 
