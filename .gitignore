@@ -1,12 +1,9 @@
 .DS_Store
 /.ceilingrc.json
 /.env.json
-/.eslintrc.json
 /.nuxt
 /.nyc_output
-/.stylelintrc.json
 /.test.env.json
 /coverage
 /dist
-/ecosystem.json
 /node_modules
