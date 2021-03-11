@@ -1,4 +1,4 @@
-import packageConfig from '@/package.json'
+import packageConfig from './package.json'
 
 export default {
   css: ['@/assets/style.scss'],
