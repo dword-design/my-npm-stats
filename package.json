@@ -1,6 +1,6 @@
 {
   "name": "my-npm-stats",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "description": "Package stats and dependents for npm authors.",
   "repository": "dword-design/my-npm-stats",
   "license": "MIT",

@@ -1,3 +1,10 @@
+## [1.1.12](https://github.com/dword-design/my-npm-stats/compare/v1.1.11...v1.1.12) (2021-03-11)
+
+
+### Bug Fixes
+
+* derive description from package config ([338f811](https://github.com/dword-design/my-npm-stats/commit/338f8110e1008ed49aaf97f1ad22b34edcb32386))
+
 ## [1.1.11](https://github.com/dword-design/my-npm-stats/compare/v1.1.10...v1.1.11) (2021-02-17)
 
 
