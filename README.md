@@ -32,7 +32,7 @@
 <!-- /BADGES -->
 
 <!-- DESCRIPTION/ -->
-
+Package stats and dependents for npm authors.
 <!-- /DESCRIPTION -->
 
 <!-- INSTALL/ -->

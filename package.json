@@ -1,7 +1,7 @@
 {
   "name": "my-npm-stats",
   "version": "1.1.11",
-  "description": "",
+  "description": "Package stats and dependents for npm authors.",
   "repository": "dword-design/my-npm-stats",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@dword-design.de>",

@@ -1,3 +1,5 @@
+import packageConfig from '@/package.json'
+
 export default {
   css: ['@/assets/style.scss'],
   modules: [
@@ -13,5 +15,5 @@ export default {
     ['@nuxtjs/google-gtag', { id: 'UA-77425155-2' }],
   ],
   name: 'my-npm-stats',
-  title: 'my-npm-stats',
+  title: packageConfig.description,
 }

@@ -1,7 +1,7 @@
 <script>
 import { map, sortBy } from '@dword-design/functions'
 
-import variables from '@/model/variables'
+import packageConfig from '@/package.json'
 
 export default {
   data: () => ({
@@ -10,14 +10,14 @@ export default {
     packages: [],
   }),
   head: {
-    title: variables.claim,
+    title: packageConfig.description,
   },
   render() {
     return (
       <div>
         <section class="section has-text-centered">
           <h1 class="title is-size-2 has-text-primary">my-npm-stats</h1>
-          <h2 class="subtitle">{variables.claim}</h2>
+          <h2 class="subtitle">{packageConfig.description}</h2>
         </section>
         <section class="hero is-primary is-bold">
           <div class="hero-body">
