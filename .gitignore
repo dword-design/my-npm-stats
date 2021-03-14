@@ -6,4 +6,5 @@
 /.test.env.json
 /coverage
 /dist
+/nginx/default.config
 /node_modules

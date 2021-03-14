@@ -14,8 +14,11 @@ import axios from 'axios'
 import { fetchPaginate } from 'fetch-paginate'
 import fetch from 'node-fetch'
 
-const downloadsAxios = axios.create({
-  baseURL: 'https://api.npmjs.org/downloads/point/last-week',
+const npmAxios = axios.create({
+  baseURL: 'https://api.npmjs.org',
+})
+const npmsIoAxios = axios.create({
+  baseURL: 'https://api.npms.io/v2',
 })
 
 export default async (req, res) => {
@@ -42,9 +45,7 @@ export default async (req, res) => {
   const packageDetails = mergeAll(
     names
       |> chunk(limit)
-      |> map(chunkNames =>
-        axios.post('https://api.npms.io/v2/package/mget', chunkNames)
-      )
+      |> map(chunkNames => npmsIoAxios.post('/package/mget', chunkNames))
       |> Promise.all
       |> await
       |> map('data')
@@ -57,7 +58,16 @@ export default async (req, res) => {
     ]
     |> map(
       async chunkNames =>
-        downloadsAxios.get(`/${chunkNames |> join(',')}`)
+        npmAxios
+          .get(`/downloads/point/last-week/${chunkNames |> join(',')}`)
+          .catch(error => {
+            if (
+              error.response.data.error !== `package ${chunkNames[0]} not found`
+            ) {
+              throw error
+            }
+            return { data: {} }
+          })
         |> await
         |> property('data')
         |> chunkPackages =>
