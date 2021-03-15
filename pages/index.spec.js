@@ -23,10 +23,10 @@ export default tester(
       ).toMatchImageSnapshot(this)
       const form = await this.page.waitForSelector('form')
       await form.evaluate(el => el.submit())
-      await delay(100)
+      await delay(200)
       expect(
         await this.page.screenshot({ fullPage: true })
-      ).toMatchImageSnapshot(this, { dumpDiffToConsole: true })
+      ).toMatchImageSnapshot(this)
       const table = await this.page.waitForSelector('table')
       const visibleRowCount = 15
       const rows = await table.$$('tbody tr')
