@@ -24,6 +24,7 @@ export default tester(
       ).toMatchImageSnapshot(this)
       await form.evaluate(el => el.submit())
       const table = await this.page.waitForSelector('table')
+      await new Promise(resolve => setTimeout(resolve, 1000))
       const visibleRowCount = 15
       const rows = await table.$$('tbody tr')
       const visibleRows = rows |> slice(0, visibleRowCount)
