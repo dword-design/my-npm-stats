@@ -3,7 +3,6 @@ import { map, slice } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginNuxt from '@dword-design/tester-plugin-nuxt'
 import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
-import delay from 'delay'
 
 export default tester(
   {
@@ -13,7 +12,9 @@ export default tester(
         height: 1,
         width: 1400,
       })
+      await this.page.waitForSelector('h1')
       const input = await this.page.waitForSelector('input')
+      const form = await this.page.waitForSelector('form')
       expect(
         await this.page.screenshot({ fullPage: true })
       ).toMatchImageSnapshot(this)
@@ -21,12 +22,7 @@ export default tester(
       expect(
         await this.page.screenshot({ fullPage: true })
       ).toMatchImageSnapshot(this)
-      const form = await this.page.waitForSelector('form')
       await form.evaluate(el => el.submit())
-      await delay(200)
-      expect(
-        await this.page.screenshot({ fullPage: true })
-      ).toMatchImageSnapshot(this)
       const table = await this.page.waitForSelector('table')
       const visibleRowCount = 15
       const rows = await table.$$('tbody tr')

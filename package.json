@@ -41,8 +41,7 @@
     "@dword-design/puppeteer": "^3.0.0",
     "@dword-design/tester": "^1.1.2",
     "@dword-design/tester-plugin-nuxt": "^1.0.2",
-    "@dword-design/tester-plugin-puppeteer": "^1.0.2",
-    "delay": "^5.0.0"
+    "@dword-design/tester-plugin-puppeteer": "^1.0.2"
   },
   "publishConfig": {
     "access": "public"
