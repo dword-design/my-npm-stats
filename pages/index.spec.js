@@ -3,7 +3,6 @@ import { map, slice } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginNuxt from '@dword-design/tester-plugin-nuxt'
 import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
-import delay from 'delay'
 
 export default tester(
   {
@@ -24,8 +23,12 @@ export default tester(
         await this.page.screenshot({ fullPage: true })
       ).toMatchImageSnapshot(this)
       await form.evaluate(el => el.submit())
-      const table = await this.page.waitForSelector('table')
-      await delay(200)
+      const table = (
+        await Promise.all([
+          this.page.waitForSelector('table'),
+          this.page.waitForSelector('.loading-overlay', { hidden: true }),
+        ])
+      )[0]
       const visibleRowCount = 15
       const rows = await table.$$('tbody tr')
       const visibleRows = rows |> slice(0, visibleRowCount)
