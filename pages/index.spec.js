@@ -16,7 +16,7 @@ export default tester(
       const input = await this.page.waitForSelector('input')
       expect(
         await this.page.screenshot({ fullPage: true })
-      ).toMatchImageSnapshot(this, { dumpDiffToConsole: true })
+      ).toMatchImageSnapshot(this)
       await input.evaluate(el => (el.value = 'dword-design'))
       expect(
         await this.page.screenshot({ fullPage: true })
@@ -26,7 +26,7 @@ export default tester(
       await delay(100)
       expect(
         await this.page.screenshot({ fullPage: true })
-      ).toMatchImageSnapshot(this)
+      ).toMatchImageSnapshot(this, { dumpDiffToConsole: true })
       const table = await this.page.waitForSelector('table')
       const visibleRowCount = 15
       const rows = await table.$$('tbody tr')
