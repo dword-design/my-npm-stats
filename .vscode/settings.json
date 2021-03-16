@@ -20,7 +20,9 @@
     "LICENSE.md": true,
     "coverage": true,
     "dist": true,
+    "docker-compose.yml": true,
     "ecosystem.json": true,
+    "nginx": true,
     "node_modules": true,
     "yarn.lock": true
   }

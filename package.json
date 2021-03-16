@@ -3,6 +3,7 @@
   "version": "1.1.12",
   "description": "Package stats and dependents for npm authors.",
   "repository": "dword-design/my-npm-stats",
+  "funding": "https://www.buymeacoffee.com/dword",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@dword-design.de>",
   "main": "dist/index.js",
@@ -21,7 +22,8 @@
     "push": "base push",
     "setupDeploy": "base setupDeploy",
     "start": "base start",
-    "test": "base test"
+    "test": "base test",
+    "test:raw": "base test:raw"
   },
   "dependencies": {
     "@dword-design/functions": "^1.1.3",
@@ -34,10 +36,18 @@
   },
   "devDependencies": {
     "@dword-design/base": "^7.0.0",
-    "@dword-design/base-config-app": "^1.5.7"
+    "@dword-design/base-config-app": "^1.5.7",
+    "@dword-design/base-config-nuxt": "^2.20.10",
+    "@dword-design/puppeteer": "^3.0.0",
+    "@dword-design/tester": "^1.1.2",
+    "@dword-design/tester-plugin-nuxt": "^1.0.2",
+    "@dword-design/tester-plugin-puppeteer": "^1.0.2"
   },
   "publishConfig": {
     "access": "public"
   },
-  "baseConfig": "@dword-design/app"
+  "baseConfig": {
+    "name": "@dword-design/app",
+    "testInContainer": true
+  }
 }
