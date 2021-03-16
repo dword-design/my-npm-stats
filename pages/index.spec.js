@@ -23,12 +23,8 @@ export default tester(
         await this.page.screenshot({ fullPage: true })
       ).toMatchImageSnapshot(this)
       await form.evaluate(el => el.submit())
-      const table = (
-        await Promise.all([
-          this.page.waitForSelector('table'),
-          this.page.waitForSelector('.loading-overlay', { hidden: true }),
-        ])
-      )[0]
+      const table = await this.page.waitForSelector('table')
+      await this.page.waitForSelector('.loading-overlay', { hidden: true })
       const visibleRowCount = 15
       const rows = await table.$$('tbody tr')
       const visibleRows = rows |> slice(0, visibleRowCount)
