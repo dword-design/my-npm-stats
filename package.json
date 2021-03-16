@@ -16,6 +16,7 @@
     "commit": "base commit",
     "dev": "base dev",
     "lint": "base lint",
+    "prepare": "base prepare",
     "prepublishOnly": "base prepublishOnly",
     "pull": "base pull",
     "push": "base push",
