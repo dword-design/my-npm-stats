@@ -1,3 +1,10 @@
+## [1.1.13](https://github.com/dword-design/my-npm-stats/compare/v1.1.12...v1.1.13) (2021-03-16)
+
+
+### Bug Fixes
+
+* tests ([#14](https://github.com/dword-design/my-npm-stats/issues/14)) ([c23c172](https://github.com/dword-design/my-npm-stats/commit/c23c1722c6825a98b6ede7803c49fa592d31b0b8))
+
 ## [1.1.12](https://github.com/dword-design/my-npm-stats/compare/v1.1.11...v1.1.12) (2021-03-11)
 
 
