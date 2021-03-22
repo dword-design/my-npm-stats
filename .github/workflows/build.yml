@@ -34,7 +34,7 @@ jobs:
         name: Push changed files
         run: yarn dw-ci push-changed-files
       - if: github.ref == 'refs/heads/master'
-        uses: webfactory/ssh-agent@v0.5.1
+        uses: webfactory/ssh-agent@v0.5.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - if: github.ref == 'refs/heads/master'
