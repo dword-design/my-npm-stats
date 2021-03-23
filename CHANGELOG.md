@@ -1,3 +1,10 @@
+## [1.1.16](https://github.com/dword-design/my-npm-stats/compare/v1.1.15...v1.1.16) (2021-03-23)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v3 ([#19](https://github.com/dword-design/my-npm-stats/issues/19)) ([00587b7](https://github.com/dword-design/my-npm-stats/commit/00587b728dcd479866da6a91a17cbe0bed9bbaeb))
+
 ## [1.1.15](https://github.com/dword-design/my-npm-stats/compare/v1.1.14...v1.1.15) (2021-03-23)
 
 
