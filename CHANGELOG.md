@@ -1,3 +1,10 @@
+## [1.1.15](https://github.com/dword-design/my-npm-stats/compare/v1.1.14...v1.1.15) (2021-03-23)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/tester-plugin-puppeteer to v2 ([#18](https://github.com/dword-design/my-npm-stats/issues/18)) ([fc8e4fe](https://github.com/dword-design/my-npm-stats/commit/fc8e4fe16ff156a7af57a113f11850406402d159))
+
 ## [1.1.14](https://github.com/dword-design/my-npm-stats/compare/v1.1.13...v1.1.14) (2021-03-22)
 
 
