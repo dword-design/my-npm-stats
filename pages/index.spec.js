@@ -7,13 +7,17 @@ import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
 export default tester(
   {
     async valid() {
-      await this.page.goto('http://localhost:3000')
+      await this.page.goto('http://localhost:3000', {
+        waitUntil: 'networkidle2',
+      })
       await this.page.setViewport({
         height: 1,
         width: 1400,
       })
       await this.page.waitForSelector('h1')
+
       const input = await this.page.waitForSelector('input')
+
       const form = await this.page.waitForSelector('form')
       expect(
         await this.page.screenshot({ fullPage: true })
@@ -23,10 +27,14 @@ export default tester(
         await this.page.screenshot({ fullPage: true })
       ).toMatchImageSnapshot(this)
       await form.evaluate(el => el.submit())
+
       const table = await this.page.waitForSelector('table')
       await this.page.waitForSelector('.loading-overlay', { hidden: true })
+
       const visibleRowCount = 15
+
       const rows = await table.$$('tbody tr')
+
       const visibleRows = rows |> slice(0, visibleRowCount)
       await Promise.all([
         ...(rows
@@ -54,6 +62,7 @@ export default tester(
             dependents.evaluate(el => (el.innerText = '50'))
           )),
       ])
+      await this.page.waitForSelector('.nuxt-progress', { hidden: true })
       expect(
         await this.page.screenshot({ fullPage: true })
       ).toMatchImageSnapshot(this)
