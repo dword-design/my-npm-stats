@@ -1067,7 +1067,26 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@dword-design/babel-config@^1.0.0", "@dword-design/babel-config@^1.0.10":
+"@dword-design/babel-config@^1.0.0":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-1.8.4.tgz#28d9f7db70668c5aeb754291165df67b0d0eb4a7"
+  integrity sha512-+rHamvW4WhRgGjEvCmTPeqQ3C2eZ9QIVNT2kZLxpSnKZaq1owTsQfHjUMNPdzhGvAKOGVhFhhXLEaCaB7wuRyA==
+  dependencies:
+    "@babel/plugin-proposal-optional-chaining" "^7.6.0"
+    "@babel/plugin-proposal-pipeline-operator" "^7.5.0"
+    "@babel/preset-env" "^7.6.3"
+    "@dword-design/functions" "^3.0.0"
+    "@vue/babel-preset-jsx" dword-design/jsx#fork-babel-preset-jsx
+    babel-plugin-add-module-exports "^1.0.2"
+    babel-plugin-macros "^3.0.1"
+    babel-plugin-module-resolver "^4.0.0"
+    babel-plugin-transform-imports "^2.0.0"
+    babel-plugin-wildcard dword-design/babel-plugin-wildcard#fork
+    depcheck-package-name "^1.0.0"
+    find-up "^5.0.0"
+    param-case "^3.0.3"
+
+"@dword-design/babel-config@^1.0.10":
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-1.8.3.tgz#7b0cfbf7a23cdfc2fbc961aa7f68e330ebea04a5"
   integrity sha512-UR7pJFEx1hvbX1+L2VWPmjurDuO3OagyNizg/H41RFbncrX7w5RbRM4eAF2nLL+2AO5kMRPZ9+f60DqXVaDWPw==
@@ -1076,20 +1095,20 @@
     "@babel/plugin-proposal-pipeline-operator" "^7.5.0"
     "@babel/preset-env" "^7.6.3"
     "@dword-design/functions" "^3.0.0"
-    "@vue/babel-preset-jsx" "github:dword-design/jsx#fork-babel-preset-jsx"
+    "@vue/babel-preset-jsx" dword-design/jsx#fork-babel-preset-jsx
     babel-plugin-add-module-exports "^1.0.2"
     babel-plugin-macros "^3.0.1"
     babel-plugin-module-resolver "^4.0.0"
     babel-plugin-transform-imports "^2.0.0"
-    babel-plugin-wildcard "github:dword-design/babel-plugin-wildcard#fork"
+    babel-plugin-wildcard dword-design/babel-plugin-wildcard#fork
     depcheck-package-name "^1.0.0"
     find-up "^5.0.0"
     param-case "^3.0.3"
 
 "@dword-design/base-config-app@^1.5.7":
-  version "1.6.8"
-  resolved "https://registry.yarnpkg.com/@dword-design/base-config-app/-/base-config-app-1.6.8.tgz#0fa773e86d4faa88aceda3404fc6a6bb8e1ee0a5"
-  integrity sha512-5zmY/9FF+CQiesdcoHxJo/9Ttl5VPPhB6CA+cJ4FxmWoLVQY7ESehvYD9s6X1vM08Qo34xwgEN65knY35+RLGg==
+  version "1.6.9"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-config-app/-/base-config-app-1.6.9.tgz#158fa857161d47fe3f143ad0f62552368f311d70"
+  integrity sha512-U+tIUrIO8O9f1tBN2XMCst2U53uI2oK0rN3og1WYmDNaRuuDcRvz5yKzGAZBVjcfj95JeymgX2BgWhnGcEYiPA==
   dependencies:
     "@dword-design/base-config-nuxt" "^2.8.0"
     "@dword-design/functions" "^3.0.0"
@@ -1124,7 +1143,7 @@
     fs-extra "^9.0.0"
     micromatch "^4.0.2"
 
-"@dword-design/base-config-nuxt@^2.20.10", "@dword-design/base-config-nuxt@^2.8.0":
+"@dword-design/base-config-nuxt@^2.20.10":
   version "2.21.2"
   resolved "https://registry.yarnpkg.com/@dword-design/base-config-nuxt/-/base-config-nuxt-2.21.2.tgz#26544059f70ed54c9eea2c45adfbf196612b3463"
   integrity sha512-34Jw3xUn+9TIa1xTtUJjlISTmkNXkXIkE6E8aBy25O+C3vjGR1tQQLwd4F3mLfIeM6LPu+YbRI5ZLIzEG11KXA==
@@ -1146,7 +1165,7 @@
     esm "^3.2.25"
     execa "^5.0.0"
     express "^4.17.1"
-    express-mount-files "github:dword-design/express-mount-files#fork"
+    express-mount-files dword-design/express-mount-files#fork
     fs-extra "^9.0.0"
     globby "^11.0.1"
     node-sass "^5.0.0"
@@ -1156,7 +1175,44 @@
     nuxt-svg-loader "^1.2.0"
     output-files "^1.1.10"
     raw-loader "^4.0.1"
-    safe-require "github:dword-design/node-safe-require#fork"
+    safe-require dword-design/node-safe-require#fork
+    sass-loader "^10.0.0"
+    stylelint "^13.6.0"
+    vue "^2.6.11"
+
+"@dword-design/base-config-nuxt@^2.8.0":
+  version "2.21.3"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-config-nuxt/-/base-config-nuxt-2.21.3.tgz#f4e1e6e43a8f3930bf0301ee253f91fba5acbde6"
+  integrity sha512-VHHNmsrY7j6E/tf7c6tkl3zqVLkw6MzJEq9d9e3VuCSGy1WEWKweur01ykX+rTKzJCHVy6t2uaSv/JexC9nUqQ==
+  dependencies:
+    "@babel/register" "^7.13.8"
+    "@dword-design/depcheck-parser-sass" "^1.1.0"
+    "@dword-design/dotenv-json-extended" "^1.2.0"
+    "@dword-design/eslint-config" "^1.4.0"
+    "@dword-design/functions" "^3.0.0"
+    "@dword-design/nuxt-push-plugins" "^1.0.0"
+    "@dword-design/stylelint-config" "^1.0.0"
+    "@nuxtjs/axios" "^5.10.3"
+    "@nuxtjs/eslint-module" "^3.0.0"
+    "@nuxtjs/global-components" "^0.6.1"
+    "@nuxtjs/stylelint-module" "^4.0.0"
+    body-parser "^1.19.0"
+    depcheck-package-name "^1.0.0"
+    depcheck-parser-vue "^1.0.0"
+    esm "^3.2.25"
+    execa "^5.0.0"
+    express "^4.17.1"
+    express-mount-files dword-design/express-mount-files#fork
+    fs-extra "^9.0.0"
+    globby "^11.0.1"
+    node-sass "^5.0.0"
+    nuxt "~2.15.0"
+    nuxt-babel-runtime "^2.0.0"
+    nuxt-i18n "^6.20.6"
+    nuxt-svg-loader "^1.2.0"
+    output-files "^1.1.10"
+    raw-loader "^4.0.1"
+    safe-require dword-design/node-safe-require#fork
     sass-loader "^10.0.0"
     stylelint "^13.6.0"
     vue "^2.6.11"
@@ -1180,7 +1236,7 @@
     commitizen "^4.0.3"
     constant-case "^3.0.3"
     cz-conventional-changelog "^3.1.0"
-    depcheck "github:dword-design/depcheck#fork"
+    depcheck dword-design/depcheck#fork
     depcheck-detector-execa "^1.2.1"
     depcheck-detector-package-name "^1.0.0"
     depcheck-package-name "^1.0.0"
@@ -1189,7 +1245,7 @@
     execa "^5.0.0"
     expect "^26.0.0"
     expect-mocha-image-snapshot "^1.0.0"
-    expect-mocha-snapshot "github:dword-design/expect-mocha-snapshot#fork"
+    expect-mocha-snapshot dword-design/expect-mocha-snapshot#fork
     find-up "^5.0.0"
     fs-extra "^9.0.0"
     get-projectz-readme-section-regex "^2.0.0"
@@ -1234,9 +1290,9 @@
     make-cli "^1.0.16"
 
 "@dword-design/depcheck-parser-sass@^1.1.0":
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/@dword-design/depcheck-parser-sass/-/depcheck-parser-sass-1.1.9.tgz#50e7538e1677556de1f8a8e89f21e29380c755da"
-  integrity sha512-hoYVjH//ZqxDslNG6P+ZFak99ZxufOu953X7OpN4JnSI7P+rln793swzF6j9tdnm2dC6GlnVVsv5ZBGD3qwLlA==
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/@dword-design/depcheck-parser-sass/-/depcheck-parser-sass-1.1.10.tgz#a567be2550c64054c670a54e27639ac7fc4f1c65"
+  integrity sha512-LOiLGZ+lSrb7pR/otYIVq1OLw+uAQx1bqy93q3jksiqwrGVGN7FXrEfVteVeY58g/UfGy+xWNXootkqRpyXEpg==
   dependencies:
     "@dword-design/functions" "^3.0.0"
     get-package-name "^1.1.0"
@@ -1245,17 +1301,43 @@
     require-package-name "^2.0.1"
 
 "@dword-design/dotenv-json-extended@^1.2.0":
-  version "1.3.11"
-  resolved "https://registry.yarnpkg.com/@dword-design/dotenv-json-extended/-/dotenv-json-extended-1.3.11.tgz#4d8dae676e29a3720853dbec50eb509fdff3c88c"
-  integrity sha512-raOZlVBy/YfQlBDgSa2QI/rlzveSAIBOo9lfl4H3NaSYI2Tkx2ixXezSj+7SLENALOhre5OMWyeTgBGyJuejPg==
+  version "1.3.12"
+  resolved "https://registry.yarnpkg.com/@dword-design/dotenv-json-extended/-/dotenv-json-extended-1.3.12.tgz#6ca1227f9e10aef66a56986bdd9311da36b69268"
+  integrity sha512-pWGvJsWm85HYtZvPRT3WsWGKpgK7/Vnk3OFGEkubFgqrnJUDt/pJQcq3IRRoEvVZhpLGNasbptR6RP5Ex8iM0A==
   dependencies:
     "@dword-design/functions" "^3.0.0"
-    ajv "^7.0.0"
+    ajv "^8.0.0"
     constant-case "^3.0.3"
     find-up "^5.0.0"
     fs-extra "^9.0.0"
 
-"@dword-design/eslint-config@^1.4.0", "@dword-design/eslint-config@^1.9.0":
+"@dword-design/eslint-config@^1.4.0":
+  version "1.27.8"
+  resolved "https://registry.yarnpkg.com/@dword-design/eslint-config/-/eslint-config-1.27.8.tgz#8f31af00e0db7012a777626a69681b35f9883762"
+  integrity sha512-NFNxvurXHCIKWfikof+r9zezCEZzrULA7lSk8j2mn0uRlSjMnN5fMIUNw/STLEadsNPslNvSqg2p83z15X0vWQ==
+  dependencies:
+    "@dword-design/babel-config" "^1.0.0"
+    "@dword-design/eslint-plugin-import-alias" "^1.1.1"
+    "@dword-design/functions" "^3.0.0"
+    babel-eslint "^11.0.0-beta.0"
+    depcheck-package-name "^1.0.0"
+    eslint-config-airbnb-base "^14.2.1"
+    eslint-config-prettier "^8.0.0"
+    eslint-import-resolver-babel-module dword-design/eslint-import-resolver-babel-module#fork
+    eslint-plugin-import "^2.22.1"
+    eslint-plugin-json-format "^2.0.1"
+    eslint-plugin-prefer-arrow "^1.1.6"
+    eslint-plugin-prettier "^3.1.3"
+    eslint-plugin-promise "^4.2.1"
+    eslint-plugin-react "^7.20.0"
+    eslint-plugin-simple-import-sort "^7.0.0"
+    eslint-plugin-sort-keys-fix "^1.1.1"
+    eslint-plugin-vue "^7.0.0-alpha.6"
+    load-pkg "^4.0.0"
+    prettier "^2.1.1"
+    vue-eslint-parser "^7.0.0"
+
+"@dword-design/eslint-config@^1.9.0":
   version "1.27.7"
   resolved "https://registry.yarnpkg.com/@dword-design/eslint-config/-/eslint-config-1.27.7.tgz#c2935f12a10b790ffb01f9b4921eb46cbf98a13d"
   integrity sha512-Vec+eNv5VsYj/DrjGiV/ODW8UEr/iiv3qrALwe7ryT5SnYrdY9PvmY06oKmbXdABjp3wszUiCYx2ct+B4IWvgg==
@@ -1267,7 +1349,7 @@
     depcheck-package-name "^1.0.0"
     eslint-config-airbnb-base "^14.2.1"
     eslint-config-prettier "^8.0.0"
-    eslint-import-resolver-babel-module "github:dword-design/eslint-import-resolver-babel-module#fork"
+    eslint-import-resolver-babel-module dword-design/eslint-import-resolver-babel-module#fork
     eslint-plugin-import "^2.22.1"
     eslint-plugin-json-format "^2.0.1"
     eslint-plugin-prefer-arrow "^1.1.6"
@@ -1282,9 +1364,9 @@
     vue-eslint-parser "^7.0.0"
 
 "@dword-design/eslint-plugin-import-alias@^1.1.1":
-  version "1.4.9"
-  resolved "https://registry.yarnpkg.com/@dword-design/eslint-plugin-import-alias/-/eslint-plugin-import-alias-1.4.9.tgz#f9ab99869e2811f405b08ffa8f69d9ee8af7c69d"
-  integrity sha512-QT8fnl45cVqgYPTgUWasZmaC492AuRcqO5f/NSZmvDGJxuTKALmKdiNXs9cNnUPOMcaVGmtkVU3nnVmNjLUDUQ==
+  version "1.4.10"
+  resolved "https://registry.yarnpkg.com/@dword-design/eslint-plugin-import-alias/-/eslint-plugin-import-alias-1.4.10.tgz#f030f787ba870b2612f1d9cbf1cb60956cfa3ef5"
+  integrity sha512-A9IgVORsCfJivCPLh0FNTeD9c1vJe4M2sA1j4JgzG/rhY3ZfRxOcoFuP/0o15rFo5lskiow8xmO1s8LLa3KPZA==
   dependencies:
     "@babel/core" "^7.10.2"
     "@dword-design/functions" "^3.0.0"
@@ -1296,7 +1378,7 @@
   integrity sha512-CBRMb6eRapNeJ3U6TeXtsLwiqmXEyPZ2gtVErdRCTDt6WTJ2bamt6jHlAGylfa8CoPgo+jIHC09EcPw5Qvbc2w==
   dependencies:
     delay "^5.0.0"
-    endent "github:dword-design/endent#fork"
+    endent dword-design/endent#fork
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
@@ -1312,9 +1394,9 @@
     vue "^2.6.11"
 
 "@dword-design/nuxt-push-plugins@^1.0.0":
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/@dword-design/nuxt-push-plugins/-/nuxt-push-plugins-1.0.12.tgz#cab4f2ae761e98d0ebfea8d9cab370531f242d26"
-  integrity sha512-H8VhFiNKgF63T91SvaAmzAmhqJoWRiQQwBXA74BL0l0BB1Jh1gjG6DOTwkvH9E5So1l8TAu5XBXdmsrS4yB2Qw==
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@dword-design/nuxt-push-plugins/-/nuxt-push-plugins-1.0.13.tgz#a99246339e482d33898f2dc6c3424a9260945f81"
+  integrity sha512-KKdSDJicLVwTk7+gCnh7Nd+UmmrfGkCLFowT48ajobyNWQ3S4BKOGrH+D0eOmBFuGEaPn7ONZWgy/2IhKvRGPQ==
   dependencies:
     "@dword-design/functions" "^3.0.0"
 
@@ -1326,9 +1408,9 @@
     puppeteer "^8.0.0"
 
 "@dword-design/stylelint-config@^1.0.0":
-  version "1.2.12"
-  resolved "https://registry.yarnpkg.com/@dword-design/stylelint-config/-/stylelint-config-1.2.12.tgz#f6a1259df10f9ab502db22b078afe45e791ea4d7"
-  integrity sha512-fWjZviHDssBkBi0E37ths2xgaW8uGVmPuzygB7gznwQ1ClLTRiMyVr/hsala8cdrD8hnQhqxm0dSpHIjIrwPAA==
+  version "1.2.13"
+  resolved "https://registry.yarnpkg.com/@dword-design/stylelint-config/-/stylelint-config-1.2.13.tgz#9642733812a1656cc48a7af8e0e25fdd721978f0"
+  integrity sha512-94S6chWtQZxlzVieZs3iAblVB2r1zNEX+LuptExQ9+7hjJj68s4k/TlQc+SFMFQXL24pl3cxp0bVsCIjkLZk/w==
   dependencies:
     depcheck-package-name "^1.0.0"
     stylelint-config-hudochenkov "^5.0.0"
@@ -1339,7 +1421,7 @@
     stylelint-order "^4.1.0"
     stylelint-prettier "^1.1.2"
     stylelint-scss "^3.17.2"
-    stylelint-use-nesting "github:dword-design/stylelint-use-nesting#fork"
+    stylelint-use-nesting dword-design/stylelint-use-nesting#fork
 
 "@dword-design/tester-plugin-nuxt@^1.0.2":
   version "1.0.7"
@@ -1351,7 +1433,7 @@
   resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-puppeteer/-/tester-plugin-puppeteer-2.0.2.tgz#ed3f8fef1bcc4e990dce57c381fe54323fc57667"
   integrity sha512-0fsBAjZyXRGPakMtiO64XaTONJEJtgnR9bCCWKL8/mY2MOcgBGBz9zwOuJEin8VpCYVfI7jLY/EFSXyb08TF4g==
   dependencies:
-    puppeteer-to-istanbul "github:dword-design/puppeteer-to-istanbul#fork"
+    puppeteer-to-istanbul dword-design/puppeteer-to-istanbul#fork
 
 "@dword-design/tester@^1.1.2":
   version "1.2.3"
@@ -2533,7 +2615,6 @@
 
 "@vue/babel-preset-jsx@github:dword-design/jsx#fork-babel-preset-jsx":
   version "1.1.2"
-  uid a73cb9961541a60a66b1b99a69a32e00bc66d336
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/a73cb9961541a60a66b1b99a69a32e00bc66d336"
   dependencies:
     "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
@@ -2573,7 +2654,6 @@
 
 "@vue/babel-sugar-inject-h@dword-design/jsx#fork-babel-sugar-inject-h":
   version "1.1.2"
-  uid cc36a2200c059120f37944615fb2ec0e22f8f3cc
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/cc36a2200c059120f37944615fb2ec0e22f8f3cc"
   dependencies:
     "@babel/plugin-syntax-jsx" "^7.2.0"
@@ -2887,7 +2967,7 @@ ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.3, ajv@^6.12.4, ajv@^6.12.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^7.0.0, ajv@^7.0.0-beta.9, ajv@^7.2.1:
+ajv@^7.0.0-beta.9, ajv@^7.2.1:
   version "7.2.4"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-7.2.4.tgz#8e239d4d56cf884bccca8cca362f508446dc160f"
   integrity sha512-nBeQgg/ZZA3u3SYxyaDvpvDtgZ/EZPF547ARgZBrG9Bhu1vKDwAIjtIf+sDtJUKa2zOcEbmRLBRSyMraS/Oy1A==
@@ -2897,7 +2977,7 @@ ajv@^7.0.0, ajv@^7.0.0-beta.9, ajv@^7.2.1:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-ajv@^8.0.1:
+ajv@^8.0.0, ajv@^8.0.1:
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.0.2.tgz#1396e27f208ed56dd5638ab5a251edeb1c91d402"
   integrity sha512-V0HGxJd0PiDF0ecHYIesTOqfd1gJguwQUOYfMfAWnRsWQEXfc5ifbUFhD3Wjc+O+y7VAqL+g07prq9gHQ/JOZQ==
@@ -3379,7 +3459,6 @@ babel-plugin-transform-imports@^2.0.0:
 
 "babel-plugin-wildcard@github:dword-design/babel-plugin-wildcard#fork":
   version "6.0.0"
-  uid "691d11923ee2dcf63e86f205b0a2c998883e3a3c"
   resolved "https://codeload.github.com/dword-design/babel-plugin-wildcard/tar.gz/691d11923ee2dcf63e86f205b0a2c998883e3a3c"
   dependencies:
     rimraf "^2.6.2"
@@ -3933,9 +4012,9 @@ caseless@~0.12.0:
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
 ceiling@^2.2.4:
-  version "2.2.13"
-  resolved "https://registry.yarnpkg.com/ceiling/-/ceiling-2.2.13.tgz#1b7c791e19ac9e158cbce063dcda710458994a87"
-  integrity sha512-gQHYYxR31eYiW5eXQEutljXINgTBanumQUCSm//pULmG8uGaEsSPMRR4gBaCwC76ASv4RXCL3eedBbNldhJ5qg==
+  version "2.2.14"
+  resolved "https://registry.yarnpkg.com/ceiling/-/ceiling-2.2.14.tgz#a159bd8aae0e21d391745329eb9aa5f8d366f9b7"
+  integrity sha512-QlKQkbtERVzz6cetiVp8jCb0n2UKEq6wdMYZfr8n6DPs1EZPI7PQaAVvcUahhjCy+/EsV3LfQTiyw4etMJ5O8A==
   dependencies:
     "@dword-design/functions" "^3.0.0"
     cosmiconfig "^7.0.0"
@@ -5142,7 +5221,6 @@ decode-uri-component@^0.2.0:
 
 dedent@0.7.0, dedent@dword-design/dedent#fork:
   version "0.7.0"
-  uid c8d46e5017d60504657c2d01b59082c0329a12a7
   resolved "https://codeload.github.com/dword-design/dedent/tar.gz/c8d46e5017d60504657c2d01b59082c0329a12a7"
   dependencies:
     babel-plugin-add-module-exports "^1.0.2"
@@ -5277,9 +5355,9 @@ depcheck-detector-package-name@^1.0.0:
   integrity sha512-lOhYEdW8dPDhBhLpz+xvGzls2o/2XBJpw/7eBEhVNpKd/apbmPJqXwiFPamJVvgrHkkJEol3LsbJSS259NGKig==
 
 depcheck-package-name@^1.0.0:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/depcheck-package-name/-/depcheck-package-name-1.0.4.tgz#3bb42138cd576b54109556bbc545cbbb12d8480d"
-  integrity sha512-IcFDzVQxozgn4uTdarvy+JSCf27fa0NoYFVZiEyuYxtNQlBhkZ98LjEGfgpr3AOzBeewSuISaU7ulEqppQsM7A==
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/depcheck-package-name/-/depcheck-package-name-1.0.5.tgz#5e29aadf4819eefcfde62f63d1bc226789f9f84f"
+  integrity sha512-UmgslfEXKX2pAv7Rrr7WKTew7lIGfzNS734KvoU/l4LO/qDl4BoapS/1wXk0OtmgAPThUkKItglmXx0VHlwiiA==
   dependencies:
     resolve-tagged-template "^1.0.0"
 
@@ -5292,9 +5370,9 @@ depcheck-parser-babel@^1.2.0:
     fs-extra "^9.0.0"
 
 depcheck-parser-vue@^1.0.0:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/depcheck-parser-vue/-/depcheck-parser-vue-1.0.9.tgz#ff70049c8568c8c942678ebc746e2897f4ba424f"
-  integrity sha512-XZQDQzFD16X3arVcyA8fne/JMdRMFQNsxKxN1tKM047MpN808CahOnEed6mMc161bCBle/IP9Jl+x7WjB8gr1w==
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/depcheck-parser-vue/-/depcheck-parser-vue-1.0.10.tgz#c10bccc2aa6dd20f4fc3b80611672f3336545d98"
+  integrity sha512-CW2TP8sif7Zl+Xwi2aU4KpMbjknaKvBsAVBxtBGRpAfWSX6VeeTYjFNmYPnXCkYiyxTXBtLaTjKJeAA35LcBmA==
   dependencies:
     "@babel/core" "^7.10.3"
     fs-extra "^9.0.1"
@@ -5302,7 +5380,6 @@ depcheck-parser-vue@^1.0.0:
 
 "depcheck@github:dword-design/depcheck#fork":
   version "0.0.1"
-  uid "8a9eb41006c2c6f9cbd79e4e68bf265e1c1df1dc"
   resolved "https://codeload.github.com/dword-design/depcheck/tar.gz/8a9eb41006c2c6f9cbd79e4e68bf265e1c1df1dc"
   dependencies:
     "@babel/parser" "^7.8.4"
@@ -5623,7 +5700,6 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0, end-of-stream@^1.4.1:
 
 "endent@github:dword-design/endent#fork":
   version "1.4.0"
-  uid be5433db67eaec07c6c9d00ba3bed2ed946dc664
   resolved "https://codeload.github.com/dword-design/endent/tar.gz/be5433db67eaec07c6c9d00ba3bed2ed946dc664"
   dependencies:
     dedent dword-design/dedent#fork
@@ -5815,7 +5891,6 @@ eslint-config-prettier@^8.0.0:
 
 "eslint-import-resolver-babel-module@github:dword-design/eslint-import-resolver-babel-module#fork":
   version "5.1.2"
-  uid "97550c5b7626a9cf582ea2392b9749702a27473d"
   resolved "https://codeload.github.com/dword-design/eslint-import-resolver-babel-module/tar.gz/97550c5b7626a9cf582ea2392b9749702a27473d"
   dependencies:
     pkg-up "^2.0.0"
@@ -6217,7 +6292,6 @@ expect-mocha-image-snapshot@^1.0.0:
 
 "expect-mocha-snapshot@github:dword-design/expect-mocha-snapshot#fork":
   version "2.0.1"
-  uid f5d168a871ef9073f1b56046dbf875aca6eff1db
   resolved "https://codeload.github.com/dword-design/expect-mocha-snapshot/tar.gz/f5d168a871ef9073f1b56046dbf875aca6eff1db"
   dependencies:
     expect "^1.20.2"
@@ -6250,7 +6324,6 @@ expect@^26.0.0, expect@^26.6.2:
 
 "express-mount-files@github:dword-design/express-mount-files#fork":
   version "0.1.1"
-  uid c9778e91443c9a3824a01298dc5090a3b53db8df
   resolved "https://codeload.github.com/dword-design/express-mount-files/tar.gz/c9778e91443c9a3824a01298dc5090a3b53db8df"
   dependencies:
     fast-glob "^3.0.4"
@@ -9332,10 +9405,18 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-make-cli@^1.0.16, make-cli@^1.0.4, make-cli@^1.0.9:
+make-cli@^1.0.16, make-cli@^1.0.9:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/make-cli/-/make-cli-1.2.0.tgz#fb710a92988636d4b65ce57bbb2c240b01a99de4"
   integrity sha512-vNkLBHVaULvIpq2PIC8hQlHm3T7VgudZ02SIQZC6Re56dFH8BNPcO9CrseAv1OeeJBzaIQOhdQxb06LKX6+vFQ==
+  dependencies:
+    "@dword-design/functions" "^3.0.0"
+    commander "^7.0.0"
+
+make-cli@^1.0.4:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/make-cli/-/make-cli-1.2.1.tgz#87eafefdc91d1f8be3b96f4a793891e4ec422e5d"
+  integrity sha512-2kdcaQS1yt7l13qYW5iUR/GoK50rm53jdosJOdhN6zY6nYim5IeDx7cyqe01tQfklJDrXy8c6stLmR7+0Yq6Vw==
   dependencies:
     "@dword-design/functions" "^3.0.0"
     commander "^7.0.0"
@@ -9502,9 +9583,9 @@ mem@^8.0.0:
     mimic-fn "^3.1.0"
 
 memfs@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/memfs/-/memfs-3.2.0.tgz#f9438e622b5acd1daa8a4ae160c496fdd1325b26"
-  integrity sha512-f/xxz2TpdKv6uDn6GtHee8ivFyxwxmPuXatBb1FBwxYNuVpbM3k/Y1Z+vC0mH/dIXXrukYfe3qe5J32Dfjg93A==
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/memfs/-/memfs-3.2.1.tgz#12301801a14eb3daa9f7491aa0ff09ffec519dd0"
+  integrity sha512-Y5vcpQzWTime4fBTr/fEnxXUxEYUgKbDlty1WX0gaa4ae14I6KmvK1S8HtXOX0elKAE6ENZJctkGtbTFYcRIUw==
   dependencies:
     fs-monkey "1.0.1"
 
@@ -9744,6 +9825,7 @@ minipass-fetch@^1.3.0, minipass-fetch@^1.3.2:
   resolved "https://registry.yarnpkg.com/minipass-fetch/-/minipass-fetch-1.3.3.tgz#34c7cea038c817a8658461bf35174551dce17a0a"
   integrity sha512-akCrLDWfbdAWkMLBxJEeWTdNsjML+dt5YgOI4gJ53vuO0vrmYQkUPxa6j6V65s9CcePIr2SSWqjT2EcrNseryQ==
   dependencies:
+    encoding "^0.1.12"
     minipass "^3.1.0"
     minipass-sized "^1.0.3"
     minizlib "^2.0.0"
@@ -10469,9 +10551,9 @@ number-is-nan@^1.0.0:
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
 nuxt-babel-runtime@^2.0.0:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/nuxt-babel-runtime/-/nuxt-babel-runtime-2.0.10.tgz#45277a85310bab7373f59199ea0bc345b1e47cc8"
-  integrity sha512-4xZGd/9bQAbCduKmCCgntDQnSWeTV2YQgJD8UoVtcVK00keUD0nQqMaGDflM//LPJckKY/cUpKxhsjsnc3E/Zg==
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/nuxt-babel-runtime/-/nuxt-babel-runtime-2.0.11.tgz#1b50ed5ef8ad77c7f5e32163748ac5ef791ed6f0"
+  integrity sha512-R3ALgEngkztpDc8MLuA3DwroMcFrHd3MzxURkngYMFE9UccLSM7ncYRoDajXPlw0X3RmVs1TL2k6eukchZmw2Q==
   dependencies:
     "@babel/core" "^7.10.2"
     "@babel/register" "^7.10.1"
@@ -10758,7 +10840,15 @@ os-tmpdir@~1.0.2:
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
   integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
 
-output-files@^1.1.10, output-files@^1.1.20, output-files@^1.1.7:
+output-files@^1.1.10, output-files@^1.1.20:
+  version "1.1.24"
+  resolved "https://registry.yarnpkg.com/output-files/-/output-files-1.1.24.tgz#5b4f3bb78a848e9306623ecab0df4898c1b3b605"
+  integrity sha512-emRRGm63uCLzAqlfBbxH6NQn03ftAojbm42MotG7N91GkBd+vVA3zloYh1gxI3ZzY+bc5Q912IrpHFBIanIcAg==
+  dependencies:
+    "@dword-design/functions" "^3.0.0"
+    fs-extra "^9.0.0"
+
+output-files@^1.1.7:
   version "1.1.23"
   resolved "https://registry.yarnpkg.com/output-files/-/output-files-1.1.23.tgz#7351a8b57f38b045367cf44b4cc106ff97b3bde2"
   integrity sha512-Q6fi2Wy/rxUfLhAiAm/ngbkJw8xbxdvx8kpVZHoXF1wPxagfg6dRWpqEDebWmjxl77YAX9UuSeoDtB/MtYvXog==
@@ -12456,7 +12546,6 @@ punycode@^2.1.0, punycode@^2.1.1:
 
 "puppeteer-to-istanbul@github:dword-design/puppeteer-to-istanbul#fork":
   version "1.4.0"
-  uid cdce72d9b1ff439ee82b9d17c46197c9445f1560
   resolved "https://codeload.github.com/dword-design/puppeteer-to-istanbul/tar.gz/cdce72d9b1ff439ee82b9d17c46197c9445f1560"
   dependencies:
     clone "^2.1.2"
@@ -13045,9 +13134,9 @@ resolve-global@1.0.0, resolve-global@^1.0.0:
     global-dirs "^0.1.1"
 
 resolve-tagged-template@^1.0.0:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/resolve-tagged-template/-/resolve-tagged-template-1.0.11.tgz#70ff66a935e6efc5348c3c8418b82cd421581a21"
-  integrity sha512-3u77UaoBwJNgit/OnK18Y5y5kwph+bfz+sI+ZUNrD2gLzVmV3/zhZXzP4HnfAZdnysaRlzETkcZH7Q9FTpse3w==
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/resolve-tagged-template/-/resolve-tagged-template-1.0.12.tgz#6ab59543caa4868caf415abe65148f01286dd185"
+  integrity sha512-VzsTOXulmMjAgNBv4fJ3W2yQoiBkVQlSc0hSyc1+Dl2P1E71IwS0zfyVSHAHdyC8hwbqPdqzCtoxr9X2Z+CUJg==
   dependencies:
     "@dword-design/functions" "^3.0.0"
 
@@ -13195,7 +13284,6 @@ safe-regex@^1.1.0:
 
 "safe-require@github:dword-design/node-safe-require#fork":
   version "1.0.3"
-  uid "53682cf7aa25d784c6278f8ccbc9986ad0dd5f38"
   resolved "https://codeload.github.com/dword-design/node-safe-require/tar.gz/53682cf7aa25d784c6278f8ccbc9986ad0dd5f38"
 
 "safer-buffer@>= 2.1.2 < 3", "safer-buffer@>= 2.1.2 < 3.0.0", safer-buffer@^2.0.2, safer-buffer@^2.1.0, safer-buffer@~2.1.0:
@@ -14237,7 +14325,6 @@ stylelint-scss@^3.17.2:
 
 "stylelint-use-nesting@github:dword-design/stylelint-use-nesting#fork":
   version "3.0.0"
-  uid "3fa262d8898e33da3831ed526e45dade37c270e7"
   resolved "https://codeload.github.com/dword-design/stylelint-use-nesting/tar.gz/3fa262d8898e33da3831ed526e45dade37c270e7"
 
 stylelint-webpack-plugin@^2.0.0:
