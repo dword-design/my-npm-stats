@@ -17,12 +17,14 @@ import fetch from 'node-fetch'
 const npmAxios = axios.create({
   baseURL: 'https://api.npmjs.org',
 })
+
 const npmsIoAxios = axios.create({
   baseURL: 'https://api.npms.io/v2',
 })
 
 export default async (req, res) => {
   const limit = 250
+
   const packages = req.query.author
     ? fetchPaginate(
         `https://api.npms.io/v2/search?q=author:${req.query.author}+not:deprecated`,
@@ -41,7 +43,9 @@ export default async (req, res) => {
       |> property('items')
       |> map('package')
     : []
+
   const names = packages |> map('name')
+
   const packageDetails = mergeAll(
     names
       |> chunk(limit)
@@ -50,7 +54,9 @@ export default async (req, res) => {
       |> await
       |> map('data')
   )
+
   const unscopedNames = names |> filter(negate(startsWith('@')))
+
   const weeklyDownloads =
     [
       ...(unscopedNames |> chunk(50)),
@@ -66,6 +72,7 @@ export default async (req, res) => {
             ) {
               throw error
             }
+
             return { data: {} }
           })
         |> await
@@ -79,6 +86,7 @@ export default async (req, res) => {
     |> Promise.all
     |> await
     |> mergeAll
+
   return res.send(
     packages
       |> map(packageData => ({

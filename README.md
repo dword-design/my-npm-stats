@@ -59,7 +59,7 @@ $ yarn add my-npm-stats
 <!-- LICENSE/ -->
 ## Contribute
 
-Are you missing something or want to contribute? Feel free to file an [issue](https://github.com/dword-design/my-npm-stats/issues) or [pull request](https://github.com/dword-design/my-npm-stats/pulls)! ⚙️
+Are you missing something or want to contribute? Feel free to file an [issue](https://github.com/dword-design/my-npm-stats/issues) or a [pull request](https://github.com/dword-design/my-npm-stats/pulls)! ⚙️
 
 ## Support
 
