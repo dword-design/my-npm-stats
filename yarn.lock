@@ -1133,7 +1133,7 @@
     fs-extra "^9.0.0"
     micromatch "^4.0.2"
 
-"@dword-design/base-config-nuxt@^2.20.10", "@dword-design/base-config-nuxt@^2.8.0":
+"@dword-design/base-config-nuxt@^2.8.0":
   version "2.21.3"
   resolved "https://registry.yarnpkg.com/@dword-design/base-config-nuxt/-/base-config-nuxt-2.21.3.tgz#f4e1e6e43a8f3930bf0301ee253f91fba5acbde6"
   integrity sha512-VHHNmsrY7j6E/tf7c6tkl3zqVLkw6MzJEq9d9e3VuCSGy1WEWKweur01ykX+rTKzJCHVy6t2uaSv/JexC9nUqQ==
@@ -1164,6 +1164,43 @@
     nuxt-i18n "^6.20.6"
     nuxt-svg-loader "^1.2.0"
     output-files "^1.1.10"
+    raw-loader "^4.0.1"
+    safe-require "github:dword-design/node-safe-require#fork"
+    sass-loader "^10.0.0"
+    stylelint "^13.6.0"
+    vue "^2.6.11"
+
+"@dword-design/base-config-nuxt@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-config-nuxt/-/base-config-nuxt-3.0.0.tgz#7d9c8460650d4ea3706bb697a04e75be6731f611"
+  integrity sha512-7N7I+IA28R/l78wCpqGPVCFjDkJ4cFQ53gPCs6wbJcAnaLDYpi7RZiQZKSL/6e0XoWVuWFhSP86Xv2wB1hH0KQ==
+  dependencies:
+    "@babel/register" "^7.13.8"
+    "@dword-design/depcheck-parser-sass" "^1.1.0"
+    "@dword-design/dotenv-json-extended" "^1.2.0"
+    "@dword-design/eslint-config" "^1.4.0"
+    "@dword-design/functions" "^3.0.0"
+    "@dword-design/nuxt-push-plugins" "^1.0.0"
+    "@dword-design/stylelint-config" "^1.0.0"
+    "@nuxtjs/axios" "^5.10.3"
+    "@nuxtjs/eslint-module" "^3.0.0"
+    "@nuxtjs/stylelint-module" "^4.0.0"
+    body-parser "^1.19.0"
+    depcheck-package-name "^1.0.0"
+    depcheck-parser-vue "^1.0.0"
+    esm "^3.2.25"
+    execa "^5.0.0"
+    express "^4.17.1"
+    express-mount-files "github:dword-design/express-mount-files#fork"
+    fs-extra "^9.0.0"
+    globby "^11.0.1"
+    node-sass "^5.0.0"
+    nuxt "~2.15.0"
+    nuxt-babel-runtime "^2.0.0"
+    nuxt-i18n "^6.20.6"
+    nuxt-svg-loader "^1.2.0"
+    output-files "^1.1.10"
+    promise-sequential "^1.1.1"
     raw-loader "^4.0.1"
     safe-require "github:dword-design/node-safe-require#fork"
     sass-loader "^10.0.0"
