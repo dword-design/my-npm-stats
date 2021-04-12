@@ -1,3 +1,10 @@
+## [1.1.19](https://github.com/dword-design/my-npm-stats/compare/v1.1.18...v1.1.19) (2021-04-12)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base-config-app to v2 ([#24](https://github.com/dword-design/my-npm-stats/issues/24)) ([22dec4c](https://github.com/dword-design/my-npm-stats/commit/22dec4c9fd5469868efe76d1e1be5b302c4ab205))
+
 ## [1.1.18](https://github.com/dword-design/my-npm-stats/compare/v1.1.17...v1.1.18) (2021-04-12)
 
 
