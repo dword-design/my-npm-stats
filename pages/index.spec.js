@@ -1,4 +1,4 @@
-import nuxtConfig from '@dword-design/base-config-nuxt/dist/nuxt.config'
+import nuxtConfig from '@dword-design/base-config-app/dist/nuxt.config'
 import { map, slice } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginNuxt from '@dword-design/tester-plugin-nuxt'
