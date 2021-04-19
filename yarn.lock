@@ -1400,12 +1400,12 @@
   resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-nuxt/-/tester-plugin-nuxt-1.0.8.tgz#a292d21b75367de90e5a5c2ef0d496c4322bdb09"
   integrity sha512-k8QnouHyHqoqzzsMb85TVYhNkuqrI0sQNGOjSaLRSEBEK0UmLnakOHbHAMaAEQA49QqjW9VthEmDodpmzqDjOQ==
 
-"@dword-design/tester-plugin-puppeteer@^2.0.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-puppeteer/-/tester-plugin-puppeteer-2.1.0.tgz#037a22b1d410243b2cf1a272dbf8e624a5b2c229"
-  integrity sha512-jwpPb6YSNl6LMHiHuFd8hrendVMOiY20zPJzwzURM7nFennVREtRx6HhJFsVpGYP0jxPBncmlrVYdZT3NSDVEQ==
+"@dword-design/tester-plugin-puppeteer@^2.1.0":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-puppeteer/-/tester-plugin-puppeteer-2.1.1.tgz#df5c5a27703ac5f3df78af0cd72327b131565de6"
+  integrity sha512-bXJF3x+oipzetIGw9Vh9iwC6MRxr+Hqhwu9HqhuLJqzStRBAOAMfPrvY94T/I2gu2CWebJ5vWRzQu2CcbRe5ww==
   dependencies:
-    puppeteer-to-istanbul dword-design/puppeteer-to-istanbul#fork
+    puppeteer-to-istanbul "github:dword-design/puppeteer-to-istanbul#fork"
 
 "@dword-design/tester@^1.1.2":
   version "1.2.4"
@@ -12410,8 +12410,9 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-puppeteer-to-istanbul@dword-design/puppeteer-to-istanbul#fork:
+"puppeteer-to-istanbul@github:dword-design/puppeteer-to-istanbul#fork":
   version "1.4.0"
+  uid bf9e82538230872bffe68b28c40ec70731afd89a
   resolved "https://codeload.github.com/dword-design/puppeteer-to-istanbul/tar.gz/bf9e82538230872bffe68b28c40ec70731afd89a"
   dependencies:
     clone "^2.1.2"
