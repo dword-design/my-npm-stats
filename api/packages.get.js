@@ -14,6 +14,8 @@ import axios from 'axios'
 import { fetchPaginate } from 'fetch-paginate'
 import fetch from 'node-fetch'
 
+const limit = 250
+
 const npmAxios = axios.create({
   baseURL: 'https://api.npmjs.org',
 })
@@ -22,9 +24,46 @@ const npmsIoAxios = axios.create({
   baseURL: 'https://api.npms.io/v2',
 })
 
-export default async (req, res) => {
-  const limit = 250
+const getWeeklyDownloads = async names => {
+  const unscopedNames = names |> filter(negate(startsWith('@')))
 
+  const chunks = [
+    ...(unscopedNames |> chunk(50)),
+    ...(names |> filter(startsWith('@')) |> map(name => [name])),
+  ]
+
+  const getChunkPackages = async chunkNames => {
+    let result = {}
+    try {
+      result =
+        npmAxios.get(`/downloads/point/last-week/${chunkNames |> join(',')}`)
+        |> await
+        |> property('data')
+    } catch (error) {
+      if (error.response.data.error !== `package ${chunkNames[0]} not found`) {
+        throw error
+      }
+    }
+
+    return (
+      (chunkNames.length === 1 ? { [chunkNames |> first]: result } : result)
+      |> mapValues(_ => _?.downloads || 0)
+    )
+  }
+
+  return chunks |> map(getChunkPackages) |> Promise.all |> await |> mergeAll
+}
+
+const getPackageDetails = async names =>
+  names
+  |> chunk(limit)
+  |> map(chunkNames => npmsIoAxios.post('/package/mget', chunkNames))
+  |> Promise.all
+  |> await
+  |> map('data')
+  |> mergeAll
+
+export default async (req, res) => {
   const packages = req.query.author
     ? fetchPaginate(
         `https://api.npms.io/v2/search?q=author:${req.query.author}+not:deprecated`,
@@ -46,46 +85,9 @@ export default async (req, res) => {
 
   const names = packages |> map('name')
 
-  const packageDetails = mergeAll(
-    names
-      |> chunk(limit)
-      |> map(chunkNames => npmsIoAxios.post('/package/mget', chunkNames))
-      |> Promise.all
-      |> await
-      |> map('data')
-  )
+  const packageDetails = await getPackageDetails(names)
 
-  const unscopedNames = names |> filter(negate(startsWith('@')))
-
-  const weeklyDownloads =
-    [
-      ...(unscopedNames |> chunk(50)),
-      ...(names |> filter(startsWith('@')) |> map(name => [name])),
-    ]
-    |> map(
-      async chunkNames =>
-        npmAxios
-          .get(`/downloads/point/last-week/${chunkNames |> join(',')}`)
-          .catch(error => {
-            if (
-              error.response.data.error !== `package ${chunkNames[0]} not found`
-            ) {
-              throw error
-            }
-
-            return { data: {} }
-          })
-        |> await
-        |> property('data')
-        |> chunkPackages =>
-          chunkNames.length === 1
-            ? { [chunkNames |> first]: chunkPackages }
-            : chunkPackages
-        |> mapValues(_ => _?.downloads || 0)
-    )
-    |> Promise.all
-    |> await
-    |> mergeAll
+  const weeklyDownloads = await getWeeklyDownloads(names)
 
   return res.send(
     packages
