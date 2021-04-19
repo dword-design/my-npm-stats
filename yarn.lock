@@ -1309,15 +1309,15 @@
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
-"@dword-design/nuxt-buefy@^1.0.5":
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/@dword-design/nuxt-buefy/-/nuxt-buefy-1.0.17.tgz#cf97934e60b6d23380c5665c36d38fe9062e2886"
-  integrity sha512-p0HK2K22iMNAbKcvx0UdkJjvC227JUQkVsSSwnoY1eck4vKQ3pJil2pgJSXl4SAGqW/rEI2m7CJyJIUykThLCg==
+"@dword-design/nuxt-buefy@^1.0.17":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@dword-design/nuxt-buefy/-/nuxt-buefy-1.0.18.tgz#b3173f8ad3de7278a632ef731227f45b8390fdd1"
+  integrity sha512-fQM6tzew8/9fhtNTzPbQVru7exFxETU5O4cS0NWNJvaai5NuCJtvxTiPdeEl+4+EQ6hDQ1+sOmVD0PPUo7NwOQ==
   dependencies:
     "@dword-design/buefy-addons" "^1.0.0"
-    "@dword-design/nuxt-push-plugins" "^1.0.0"
     depcheck-package-name "^1.0.0"
     nuxt-buefy "^0.4.2"
+    nuxt-push-plugins "^1.0.16"
     vue "^2.6.11"
 
 "@dword-design/nuxt-push-plugins@^1.0.0":
@@ -10418,6 +10418,13 @@ nuxt-i18n@^6.20.6:
     lodash.merge "^4.6.2"
     ufo "^0.6.11"
     vue-i18n "^8.24.3"
+
+nuxt-push-plugins@^1.0.16:
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/nuxt-push-plugins/-/nuxt-push-plugins-1.0.16.tgz#0f4dc86515092dcc667fccd97315aa0cdc017e5a"
+  integrity sha512-3KUVARTJ9x6gQ3s+vgp63levm7L49rwbrNoI+W11MtyE92frqrA3nO7yIsLFwtmRsBrw46UtHJKMm8tQuTtbnw==
+  dependencies:
+    "@dword-design/functions" "^3.0.0"
 
 nuxt-svg-loader@^1.2.0:
   version "1.2.0"
