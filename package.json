@@ -48,5 +48,7 @@
   "baseConfig": {
     "name": "@dword-design/app",
     "testInContainer": true
-  }
+  },
+  "homepage": "",
+  "keywords": []
 }
