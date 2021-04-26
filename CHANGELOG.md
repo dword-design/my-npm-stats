@@ -1,3 +1,10 @@
+## [1.1.21](https://github.com/dword-design/my-npm-stats/compare/v1.1.20...v1.1.21) (2021-04-26)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/puppeteer to v4 ([#34](https://github.com/dword-design/my-npm-stats/issues/34)) ([cdbeb2c](https://github.com/dword-design/my-npm-stats/commit/cdbeb2cae5cdde47249e857d62f631c051c64cac))
+
 ## [1.1.20](https://github.com/dword-design/my-npm-stats/compare/v1.1.19...v1.1.20) (2021-04-26)
 
 
