@@ -1382,10 +1382,10 @@
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
-"@dword-design/nuxt-buefy@^1.0.5":
-  version "1.0.22"
-  resolved "https://registry.yarnpkg.com/@dword-design/nuxt-buefy/-/nuxt-buefy-1.0.22.tgz#fe27f75926f77005177947d7ecf2d91250a67289"
-  integrity sha512-VX5LMpSYJRI2l3NsE1hBA9kVf6N3cf/Bn+7s6jUyDtJ/8+IiJ21osCcXDzF9wzSia2tN91J/6S6nSH06bJf8yg==
+"@dword-design/nuxt-buefy@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/nuxt-buefy/-/nuxt-buefy-2.0.0.tgz#b13a713723ed54a1c9c6f3f6ba010ea9b0aa7038"
+  integrity sha512-ApxUkca5nYgeFvROUytX+uDvIDgWwXJPPaqvG6Isv/1G1J4KuuF+Y+ftFVuRrgT7bN86NSG0caJAbS+Ocm/rSQ==
   dependencies:
     "@dword-design/buefy-addons" "^1.0.0"
     depcheck-package-name "^1.0.0"
