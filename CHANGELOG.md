@@ -1,3 +1,10 @@
+## [1.1.26](https://github.com/dword-design/my-npm-stats/compare/v1.1.25...v1.1.26) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/tester to v2 ([#40](https://github.com/dword-design/my-npm-stats/issues/40)) ([da48097](https://github.com/dword-design/my-npm-stats/commit/da480977aee0f5f948d30ee8aa08419c3b573fdf))
+
 ## [1.1.25](https://github.com/dword-design/my-npm-stats/compare/v1.1.24...v1.1.25) (2021-05-03)
 
 
