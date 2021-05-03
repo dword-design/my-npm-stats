@@ -1,3 +1,10 @@
+## [1.1.27](https://github.com/dword-design/my-npm-stats/compare/v1.1.26...v1.1.27) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/puppeteer to v5 ([#39](https://github.com/dword-design/my-npm-stats/issues/39)) ([fb06daa](https://github.com/dword-design/my-npm-stats/commit/fb06daa3cc48ebbbe6fe4652ec2a8fbf0b34fc11))
+
 ## [1.1.26](https://github.com/dword-design/my-npm-stats/compare/v1.1.25...v1.1.26) (2021-05-03)
 
 
