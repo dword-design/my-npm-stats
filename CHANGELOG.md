@@ -1,3 +1,10 @@
+## [1.1.25](https://github.com/dword-design/my-npm-stats/compare/v1.1.24...v1.1.25) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/nuxt-buefy to v2 ([#38](https://github.com/dword-design/my-npm-stats/issues/38)) ([558c949](https://github.com/dword-design/my-npm-stats/commit/558c9493da390d54afe48569ec52fb797e3cc9b2))
+
 ## [1.1.24](https://github.com/dword-design/my-npm-stats/compare/v1.1.23...v1.1.24) (2021-05-03)
 
 
