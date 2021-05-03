@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@dword-design/functions": "^4.0.0",
-    "@dword-design/nuxt-buefy": "^1.0.5",
+    "@dword-design/nuxt-buefy": "^2.0.0",
     "@nuxtjs/google-gtag": "^1.0.4",
     "axios": "^0.21.0",
     "fetch-paginate": "^6.1.0",
