@@ -1,3 +1,10 @@
+## [1.1.28](https://github.com/dword-design/my-npm-stats/compare/v1.1.27...v1.1.28) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/tester-plugin-nuxt to v2 ([#41](https://github.com/dword-design/my-npm-stats/issues/41)) ([e5bfd10](https://github.com/dword-design/my-npm-stats/commit/e5bfd106cd40480173224c2f58ba1328ddcec07a))
+
 ## [1.1.27](https://github.com/dword-design/my-npm-stats/compare/v1.1.26...v1.1.27) (2021-05-03)
 
 
