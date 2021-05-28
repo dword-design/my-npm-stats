@@ -1,3 +1,10 @@
+## [1.1.29](https://github.com/dword-design/my-npm-stats/compare/v1.1.28...v1.1.29) (2021-05-28)
+
+
+### Bug Fixes
+
+* update config files ([db72ac5](https://github.com/dword-design/my-npm-stats/commit/db72ac51b98354e2fc207bbbbecf67f9d822d1c1))
+
 ## [1.1.28](https://github.com/dword-design/my-npm-stats/compare/v1.1.27...v1.1.28) (2021-05-04)
 
 
