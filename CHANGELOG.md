@@ -1,3 +1,10 @@
+## [1.1.32](https://github.com/dword-design/my-npm-stats/compare/v1.1.31...v1.1.32) (2021-07-26)
+
+
+### Bug Fixes
+
+* lock file maintenance ([d3159f4](https://github.com/dword-design/my-npm-stats/commit/d3159f4e2bfb586dfa9b555cd08a25b4930def9b))
+
 ## [1.1.31](https://github.com/dword-design/my-npm-stats/compare/v1.1.30...v1.1.31) (2021-07-20)
 
 
