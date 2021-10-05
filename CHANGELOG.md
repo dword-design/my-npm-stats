@@ -1,3 +1,10 @@
+## [1.1.38](https://github.com/dword-design/my-npm-stats/compare/v1.1.37...v1.1.38) (2021-10-05)
+
+
+### Bug Fixes
+
+* update dependency axios to ^0.22.0 ([b266cc2](https://github.com/dword-design/my-npm-stats/commit/b266cc295cf5871ae381450d4e9b66fbc16f718d))
+
 ## [1.1.37](https://github.com/dword-design/my-npm-stats/compare/v1.1.36...v1.1.37) (2021-08-30)
 
 
