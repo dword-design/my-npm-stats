@@ -6,7 +6,7 @@
       </a>
     </td>
     <td class="is-size-5">
-      {{ value.weeklyDownloads }}
+      {{ value.weeklyDownloads.toLocaleString() }}
     </td>
     <td>
       <b-button
@@ -15,7 +15,7 @@
         target="_blank"
         type="is-light"
       >
-        {{ value.dependentsCount }}
+        {{ value.dependentsCount.toLocaleString() }}
       </b-button>
     </td>
   </tr>

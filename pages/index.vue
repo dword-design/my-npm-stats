@@ -39,7 +39,7 @@
           }),
         }"
       >
-        <b-loading :active="isLoading" :is-full-page="false" />
+        <b-loading :model-value="isLoading" :is-full-page="false" />
         <table v-if="packages.length > 0" class="table is-fullwidth">
           <thead>
             <tr>
