@@ -81,7 +81,7 @@ export default {
     '$route.query.author': {
       handler() {
         if (process.client) {
-          nextTick(async () => {
+          this.$nextTick(async () => {
             this.authorName = this.$route.query.author
             this.isLoading = true
             this.packages = await $fetch('/api/packages', {
