@@ -10,9 +10,9 @@ $size-2: 42px;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
-@import "~bulma/sass/utilities/_all";
+@import "bulma/sass/utilities/_all";
 
-@import "@dword-design/nuxt-buefy/dist/style";
+@import "@dword-design/nuxt-buefy/style.scss";
 
 .hero.is-primary .label {
   color: #fff;
@@ -61,4 +61,8 @@ $fullhd-enabled: false;
 
 .modal-background {
   background: rgba(10, 10, 10, 0.5);
+}
+
+.icon-text {
+  align-items: center;
 }

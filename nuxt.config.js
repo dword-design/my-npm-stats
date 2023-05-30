@@ -1,19 +1,34 @@
-import packageConfig from './package.json'
+import projectModule from './node_modules/@dword-design/base-config-nuxt/dist/modules/project/index.js'
+import jiti from 'jiti'
+import dotenv from '@dword-design/dotenv-json-extended'
+import jitiBabelTransform from '@dword-design/jiti-babel-transform'
+import { babel } from '@rollup/plugin-babel'
+
+dotenv.config()
+
+let options
+try {
+  const jitiInstance = jiti(process.cwd(), {
+    esmResolve: true,
+    interopDefault: true,
+    transform: jitiBabelTransform,
+  })
+  options = jitiInstance('./config.js')
+} catch (error) {
+  if (error.message.startsWith("Cannot find module './config.js'\n")) {
+    options = {}
+  } else {
+    throw error
+  }
+}
 
 export default {
-  css: ['@/assets/style.scss'],
+  nitro: {
+    rollupConfig: {
+      plugins: [babel({ babelHelpers: 'bundled' })],
+    },
+  },
   modules: [
-    ['@dword-design/nuxt-buefy', { css: false }],
-    [
-      'nuxt-webfontloader',
-      {
-        google: {
-          families: ['Source Sans Pro'],
-        },
-      },
-    ],
-    ['@nuxtjs/google-gtag', { id: 'UA-77425155-2' }],
+    [projectModule, options],
   ],
-  name: 'my-npm-stats',
-  title: packageConfig.description,
 }

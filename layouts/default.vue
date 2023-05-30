@@ -1,10 +1,6 @@
-<script>
-export default {
-  render: () => (
-    <div>
-      <nuxt />
-      <app-footer />
-    </div>
-  ),
-}
-</script>
+<template>
+  <div>
+    <slot />
+    <app-footer />
+  </div>
+</template>
