@@ -4,6 +4,7 @@
 /.eslintcache
 /.nuxt
 /.nyc_output
+/.output
 /.stylelintcache
 /.test.env.json
 /app.vue

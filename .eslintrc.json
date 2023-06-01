@@ -1,5 +1,8 @@
 {
   "extends": "@dword-design/eslint-config",
+  "globals": {
+    "$fetch": "readonly"
+  },
   "rules": {
     "import/no-unresolved": [
       "error",
@@ -10,9 +13,5 @@
       }
     ],
     "import/no-webpack-loader-syntax": "off"
-  },
-  "globals": {
-    "$fetch": "readonly",
-    "nextTick": "readonly"
   }
 }

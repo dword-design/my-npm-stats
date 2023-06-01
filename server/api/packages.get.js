@@ -8,12 +8,13 @@ import {
   mergeAll,
   negate,
   property,
-  startsWith,
   sortBy,
+  startsWith,
 } from '@dword-design/functions'
 import axios from 'axios'
 import fetchPaginate from 'fetch-paginate'
 import fetch from 'node-fetch'
+
 import { defineEventHandler, getQuery } from '#imports'
 
 const limit = 250
@@ -67,6 +68,7 @@ const getPackageDetails = async names =>
 
 export default defineEventHandler(async event => {
   const query = getQuery(event)
+
   const packages = query.author
     ? fetchPaginate.default(
         `https://api.npms.io/v2/search?q=author:${query.author}+not:deprecated`,
@@ -79,7 +81,7 @@ export default defineEventHandler(async event => {
             offset: 'from',
             page: false,
           },
-        }
+        },
       )
       |> await
       |> property('items')
@@ -91,7 +93,9 @@ export default defineEventHandler(async event => {
   const packageDetails = await getPackageDetails(names)
 
   const weeklyDownloads = await getWeeklyDownloads(names)
-  return packages
+
+  return (
+    packages
     |> map(packageData => ({
       ...packageData,
       dependentsCount:
@@ -99,4 +103,5 @@ export default defineEventHandler(async event => {
       weeklyDownloads: weeklyDownloads[packageData.name],
     }))
     |> sortBy([_ => -_.weeklyDownloads, _ => -_.dependentsCount])
+  )
 })
