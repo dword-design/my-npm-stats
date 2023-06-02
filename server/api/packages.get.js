@@ -8,11 +8,14 @@ import {
   mergeAll,
   negate,
   property,
+  sortBy,
   startsWith,
 } from '@dword-design/functions'
 import axios from 'axios'
-import { fetchPaginate } from 'fetch-paginate'
+import fetchPaginate from 'fetch-paginate'
 import fetch from 'node-fetch'
+
+import { defineEventHandler, getQuery } from '#imports'
 
 const limit = 250
 
@@ -63,10 +66,12 @@ const getPackageDetails = async names =>
   |> map('data')
   |> mergeAll
 
-export default async (req, res) => {
-  const packages = req.query.author
-    ? fetchPaginate(
-        `https://api.npms.io/v2/search?q=author:${req.query.author}+not:deprecated`,
+export default defineEventHandler(async event => {
+  const query = getQuery(event)
+
+  const packages = query.author
+    ? fetchPaginate.default(
+        `https://api.npms.io/v2/search?q=author:${query.author}+not:deprecated`,
         {
           getFetch: () => fetch,
           getItems: property('results'),
@@ -76,7 +81,7 @@ export default async (req, res) => {
             offset: 'from',
             page: false,
           },
-        }
+        },
       )
       |> await
       |> property('items')
@@ -89,13 +94,14 @@ export default async (req, res) => {
 
   const weeklyDownloads = await getWeeklyDownloads(names)
 
-  return res.send(
+  return (
     packages
-      |> map(packageData => ({
-        ...packageData,
-        dependentsCount:
-          packageDetails[packageData.name].collected.npm.dependentsCount,
-        weeklyDownloads: weeklyDownloads[packageData.name],
-      }))
+    |> map(packageData => ({
+      ...packageData,
+      dependentsCount:
+        packageDetails[packageData.name].evaluation.popularity.dependentsCount,
+      weeklyDownloads: weeklyDownloads[packageData.name],
+    }))
+    |> sortBy([_ => -_.weeklyDownloads, _ => -_.dependentsCount])
   )
-}
+})

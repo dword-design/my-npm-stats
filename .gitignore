@@ -1,10 +1,15 @@
 .DS_Store
 /.ceilingrc.json
 /.env.json
+/.eslintcache
 /.nuxt
 /.nyc_output
+/.output
+/.stylelintcache
 /.test.env.json
+/app.vue
 /coverage
 /dist
 /nginx/default.config
 /node_modules
+/nuxt.config.js

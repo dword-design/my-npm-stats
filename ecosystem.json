@@ -11,7 +11,7 @@
   "deploy": {
     "production": {
       "host": [
-        "dword-design.de"
+        "sebastianlandwehr.com"
       ],
       "path": "/var/www/my-npm-stats",
       "user": "root",

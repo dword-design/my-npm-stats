@@ -1,4 +1,3 @@
-import nuxtConfig from '@dword-design/base-config-app/dist/nuxt.config'
 import { map, slice } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginNuxt from '@dword-design/tester-plugin-nuxt'
@@ -20,11 +19,11 @@ export default tester(
 
       const form = await this.page.waitForSelector('form')
       expect(
-        await this.page.screenshot({ fullPage: true })
+        await this.page.screenshot({ fullPage: true }),
       ).toMatchImageSnapshot(this)
       await input.evaluate(el => (el.value = 'dword-design'))
       expect(
-        await this.page.screenshot({ fullPage: true })
+        await this.page.screenshot({ fullPage: true }),
       ).toMatchImageSnapshot(this)
       await form.evaluate(el => el.submit())
 
@@ -45,28 +44,28 @@ export default tester(
           |> Promise.all
           |> await
           |> map(packageName =>
-            packageName.evaluate(el => (el.innerText = 'package'))
+            packageName.evaluate(el => (el.innerText = 'package')),
           )),
         ...(visibleRows
           |> map(row => row.$('td:nth-child(2)'))
           |> Promise.all
           |> await
           |> map(weeklyDownloads =>
-            weeklyDownloads.evaluate(el => (el.innerText = '1.000'))
+            weeklyDownloads.evaluate(el => (el.innerText = '1.000')),
           )),
         ...(visibleRows
           |> map(row => row.$('td:nth-child(3) a'))
           |> Promise.all
           |> await
           |> map(dependents =>
-            dependents.evaluate(el => (el.innerText = '50'))
+            dependents.evaluate(el => (el.innerText = '50')),
           )),
       ])
       await this.page.waitForSelector('.nuxt-progress', { hidden: true })
       expect(
-        await this.page.screenshot({ fullPage: true })
+        await this.page.screenshot({ fullPage: true }),
       ).toMatchImageSnapshot(this)
     },
   },
-  [testerPluginNuxt(nuxtConfig), testerPluginPuppeteer()]
+  [testerPluginNuxt(), testerPluginPuppeteer()],
 )

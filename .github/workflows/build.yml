@@ -6,29 +6,29 @@ jobs:
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: rokroskar/workflow-run-cleanup-action@v0.3.3
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
           lfs: true
           ref: ${{ github.event.pull_request.head.repo.full_name == github.repository &&
             github.event.pull_request.head.ref || '' }}
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 18
       - run: git config --global user.email "actions@github.com"
       - run: git config --global user.name "GitHub Actions"
       - run: yarn --frozen-lockfile
       - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TEST_PORT: ${{ secrets.TEST_PORT }}
         run: yarn test
       - if: failure()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Image Snapshot Diffs
           path: "**/__image_snapshots__/__diff_output__"
-      - uses: codecov/codecov-action@v2
+      - uses: codecov/codecov-action@v3
         with:
-          fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
       - run: yarn checkUnknownFiles
       - env:
@@ -41,7 +41,7 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - if: github.ref == 'refs/heads/master'
-        run: ssh-keyscan dword-design.de >> ~/.ssh/known_hosts
+        run: ssh-keyscan sebastianlandwehr.com >> ~/.ssh/known_hosts
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: github.ref == 'refs/heads/master'
