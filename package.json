@@ -1,6 +1,6 @@
 {
   "name": "my-npm-stats",
-  "version": "1.1.38",
+  "version": "1.1.39",
   "description": "Package stats and dependents for npm authors.",
   "repository": "dword-design/my-npm-stats",
   "funding": "https://github.com/sponsors/dword-design",
