@@ -1,3 +1,10 @@
+## [1.1.40](https://github.com/dword-design/my-npm-stats/compare/v1.1.39...v1.1.40) (2023-06-05)
+
+
+### Bug Fixes
+
+* lock file maintenance ([c23947f](https://github.com/dword-design/my-npm-stats/commit/c23947fed82d0e4f73601500b1b0d82f5e9099fd))
+
 ## [1.1.39](https://github.com/dword-design/my-npm-stats/compare/v1.1.38...v1.1.39) (2023-06-02)
 
 
