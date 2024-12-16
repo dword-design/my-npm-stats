@@ -28,7 +28,7 @@
     "test:raw": "base test:raw"
   },
   "dependencies": {
-    "@dword-design/functions": "^4.0.0",
+    "@dword-design/functions": "^6.0.0",
     "@dword-design/nuxt-buefy": "^3.0.2",
     "@mdi/svg": "^7.2.96",
     "axios": "^1.4.0",
