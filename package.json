@@ -34,7 +34,7 @@
     "axios": "^1.4.0",
     "fetch-paginate": "^6.1.0",
     "node-fetch": "^3.3.1",
-    "nuxt-gtag": "^0.5.7",
+    "nuxt-gtag": "^0.6.0",
     "unplugin-fonts": "^1.0.3"
   },
   "devDependencies": {
