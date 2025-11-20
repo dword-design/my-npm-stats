@@ -1,0 +1,8 @@
+{
+  "*.vue": [
+    "eslint --fix --config eslint.lint-staged.config.ts",
+    "stylelint --fix"
+  ],
+  "*.{css,scss}": "stylelint --fix",
+  "*.{json,ts}": "eslint --fix --config eslint.lint-staged.config.ts"
+}
